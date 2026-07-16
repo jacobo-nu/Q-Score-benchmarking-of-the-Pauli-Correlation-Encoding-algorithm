@@ -1,0 +1,22 @@
+slurmstepd: info: Setting TMPDIR to /scratch/512332. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260701-214508
+Array ID: 6
+num_nodes: 130
+num_instances: 75
+optimizer: DIFFERENTIALEVOLUTION
+==============================
+
+==============================
+num_nodes    = 130
+num_instances= 75
+k            = 2
+optimizer    = DIFFERENTIALEVOLUTION
+maxiter      = 30
+outdir       = Resultados/PCE/20260701-214508
+==============================
+
+
+✔ n=130 beta=0.7539 ± 0.0128 (PASSED)
+✔ Resultado guardado en: Resultados/PCE/20260701-214508/n_130.json
+Fecha fin: Thu Jul  2 10:06:43 CEST 2026

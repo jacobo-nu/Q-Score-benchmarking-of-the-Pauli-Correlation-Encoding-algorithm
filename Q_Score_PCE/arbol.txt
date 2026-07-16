@@ -1,0 +1,356 @@
+[tec_app6@login02 Q_Score_PCE]$ tree
+.
+├── arbol.txt
+├── Q_Score_FT3
+│   ├── aggregate_qscore_PCE.py
+│   ├── Imagenes
+│   │   └── PCE
+│   │       ├── 20260702-094152
+│   │       │   └── qscore_pce_n5-30_k2_DIFFERENTIALEVOLUTION_maxiter30_seed42_20260702-133219.png
+│   │       ├── 20260703-083242
+│   │       │   └── qscore_pce_n50-250_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-083927.png
+│   │       ├── 20260703-084043
+│   │       ├── 20260703-084117
+│   │       └── 20260706-130414
+│   ├── job.sh
+│   ├── logs
+│   │   ├── 20260702-094152
+│   │   │   └── summary.log
+│   │   ├── 20260703-083242
+│   │   │   ├── qscore_pce_8130155_0.err
+│   │   │   ├── qscore_pce_8130155_0.out
+│   │   │   ├── qscore_pce_8130155_10.err
+│   │   │   ├── qscore_pce_8130155_10.out
+│   │   │   ├── qscore_pce_8130155_1.err
+│   │   │   ├── qscore_pce_8130155_1.out
+│   │   │   ├── qscore_pce_8130155_2.err
+│   │   │   ├── qscore_pce_8130155_2.out
+│   │   │   ├── qscore_pce_8130155_3.err
+│   │   │   ├── qscore_pce_8130155_3.out
+│   │   │   ├── qscore_pce_8130155_4.err
+│   │   │   ├── qscore_pce_8130155_4.out
+│   │   │   ├── qscore_pce_8130155_5.err
+│   │   │   ├── qscore_pce_8130155_5.out
+│   │   │   ├── qscore_pce_8130155_6.err
+│   │   │   ├── qscore_pce_8130155_6.out
+│   │   │   ├── qscore_pce_8130155_7.err
+│   │   │   ├── qscore_pce_8130155_7.out
+│   │   │   ├── qscore_pce_8130155_8.err
+│   │   │   ├── qscore_pce_8130155_8.out
+│   │   │   ├── qscore_pce_8130155_9.err
+│   │   │   └── qscore_pce_8130155_9.out
+│   │   ├── 20260703-084043
+│   │   ├── 20260703-084117
+│   │   └── 20260706-130414
+│   │       ├── qscore_pce_8224059_0.err
+│   │       ├── qscore_pce_8224059_0.out
+│   │       ├── qscore_pce_8224059_1.err
+│   │       ├── qscore_pce_8224059_1.out
+│   │       ├── qscore_pce_8224059_2.err
+│   │       ├── qscore_pce_8224059_2.out
+│   │       ├── qscore_pce_8224059_3.err
+│   │       └── qscore_pce_8224059_3.out
+│   ├── __pycache__
+│   │   └── qscore_PCE.cpython-39.pyc
+│   ├── qscore_PCE.py
+│   ├── Resultados
+│   │   └── PCE
+│   │       ├── 20260702-094152
+│   │       │   ├── n_10.json
+│   │       │   ├── n_15.json
+│   │       │   ├── n_20.json
+│   │       │   ├── n_25.json
+│   │       │   ├── n_30.json
+│   │       │   ├── n_5.json
+│   │       │   └── qscore_pce_n5-30_k2_DIFFERENTIALEVOLUTION_maxiter30_seed42_20260702-133219.csv
+│   │       ├── 20260703-083242
+│   │       │   ├── n_100.h5
+│   │       │   ├── n_150.h5
+│   │       │   ├── n_175.h5
+│   │       │   ├── n_200.h5
+│   │       │   ├── n_225.h5
+│   │       │   ├── n_250.h5
+│   │       │   ├── n_50.h5
+│   │       │   └── qscore_pce_n50-250_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-083927.csv
+│   │       ├── 20260703-084043
+│   │       ├── 20260703-084117
+│   │       └── 20260706-130414
+│   ├── run_qscore_PCE_array.sh
+│   ├── run_qscore_PCE_packed.sh
+│   ├── run_qscore_PCE.py
+│   ├── run_qscore_PCE_single_n.py
+│   └── submit_qscore_PCE.sh
+└── Q_Score_Qmio
+    ├── aggregate_qscore_PCE.py
+    ├── Imagenes
+    │   └── PCE
+    │       ├── 20260701-132858
+    │       │   └── qscore_pce_n4-32_k2_DIFFERENTIALEVOLUTION_maxiter10_seed42_20260701-140559.png
+    │       ├── 20260701-143809
+    │       │   └── qscore_pce_n5-25_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260701-150157.png
+    │       ├── 20260701-150417
+    │       │   ├── qscore_pce_n5-100_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260701-195049.png
+    │       │   ├── qscore_pce_n5-110_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260701-210832.png
+    │       │   ├── qscore_pce_n5-120_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260701-213627.png
+    │       │   ├── qscore_pce_n5-140_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260702-081555.png
+    │       │   └── qscore_pce_n5-140_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260702-112508.png
+    │       ├── 20260701-214508
+    │       │   ├── qscore_pce_n10-110_k2_DIFFERENTIALEVOLUTION_maxiter30_seed42_20260702-081720.png
+    │       │   └── qscore_pce_n10-130_k2_DIFFERENTIALEVOLUTION_maxiter30_seed42_20260702-103740.png
+    │       ├── 20260702-141827
+    │       │   ├── qscore_pce_n50-175_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-081924.png
+    │       │   ├── qscore_pce_n50-200_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-104132.png
+    │       │   └── qscore_pce_n50-225_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-135506.png
+    │       ├── 20260703-093435
+    │       │   └── qscore_pce_n5-45_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-104053.png
+    │       ├── 20260703-124958
+    │       │   └── qscore_pce_n10-150_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260705-221152.png
+    │       ├── 20260705-221327
+    │       ├── 20260706-092044
+    │       ├── 20260706-105424
+    │       │   ├── qscore_pce_n10-60_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-120421.png
+    │       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-122624.png
+    │       └── 20260706-122804
+    │           └── qscore_pce_n10-100_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260707-084016.png
+    ├── job.sh
+    ├── logs
+    │   ├── 20260701-132858
+    │   │   └── summary.log
+    │   ├── 20260701-143809
+    │   │   └── summary.log
+    │   ├── 20260701-150417
+    │   │   └── summary.log
+    │   ├── 20260701-214508
+    │   │   ├── qscore_pce_512325_0.err
+    │   │   ├── qscore_pce_512325_0.out
+    │   │   ├── qscore_pce_512325_10.err
+    │   │   ├── qscore_pce_512325_10.out
+    │   │   ├── qscore_pce_512325_11.err
+    │   │   ├── qscore_pce_512325_11.out
+    │   │   ├── qscore_pce_512325_12.err
+    │   │   ├── qscore_pce_512325_12.out
+    │   │   ├── qscore_pce_512325_13.err
+    │   │   ├── qscore_pce_512325_13.out
+    │   │   ├── qscore_pce_512325_14.err
+    │   │   ├── qscore_pce_512325_14.out
+    │   │   ├── qscore_pce_512325_15.err
+    │   │   ├── qscore_pce_512325_15.out
+    │   │   ├── qscore_pce_512325_16.err
+    │   │   ├── qscore_pce_512325_16.out
+    │   │   ├── qscore_pce_512325_17.err
+    │   │   ├── qscore_pce_512325_17.out
+    │   │   ├── qscore_pce_512325_1.err
+    │   │   ├── qscore_pce_512325_1.out
+    │   │   ├── qscore_pce_512325_2.err
+    │   │   ├── qscore_pce_512325_2.out
+    │   │   ├── qscore_pce_512325_3.err
+    │   │   ├── qscore_pce_512325_3.out
+    │   │   ├── qscore_pce_512325_4.err
+    │   │   ├── qscore_pce_512325_4.out
+    │   │   ├── qscore_pce_512325_5.err
+    │   │   ├── qscore_pce_512325_5.out
+    │   │   ├── qscore_pce_512325_6.err
+    │   │   ├── qscore_pce_512325_6.out
+    │   │   ├── qscore_pce_512325_7.err
+    │   │   ├── qscore_pce_512325_7.out
+    │   │   ├── qscore_pce_512325_8.err
+    │   │   ├── qscore_pce_512325_8.out
+    │   │   ├── qscore_pce_512325_9.err
+    │   │   └── qscore_pce_512325_9.out
+    │   ├── 20260702-141827
+    │   │   ├── qscore_pce_512438_0.err
+    │   │   ├── qscore_pce_512438_0.out
+    │   │   ├── qscore_pce_512438_10.err
+    │   │   ├── qscore_pce_512438_10.out
+    │   │   ├── qscore_pce_512438_1.err
+    │   │   ├── qscore_pce_512438_1.out
+    │   │   ├── qscore_pce_512438_2.err
+    │   │   ├── qscore_pce_512438_2.out
+    │   │   ├── qscore_pce_512438_3.err
+    │   │   ├── qscore_pce_512438_3.out
+    │   │   ├── qscore_pce_512438_4.err
+    │   │   ├── qscore_pce_512438_4.out
+    │   │   ├── qscore_pce_512438_5.err
+    │   │   ├── qscore_pce_512438_5.out
+    │   │   ├── qscore_pce_512438_6.err
+    │   │   ├── qscore_pce_512438_6.out
+    │   │   ├── qscore_pce_512438_7.err
+    │   │   ├── qscore_pce_512438_7.out
+    │   │   ├── qscore_pce_512438_8.err
+    │   │   ├── qscore_pce_512438_8.out
+    │   │   ├── qscore_pce_512438_9.err
+    │   │   └── qscore_pce_512438_9.out
+    │   ├── 20260703-093435
+    │   │   └── summary.log
+    │   ├── 20260703-124958
+    │   │   └── summary.log
+    │   ├── 20260705-221327
+    │   │   ├── qscore_pce_512897_0.err
+    │   │   ├── qscore_pce_512897_0.out
+    │   │   ├── qscore_pce_512897_1.err
+    │   │   ├── qscore_pce_512897_1.out
+    │   │   ├── qscore_pce_512897_2.err
+    │   │   ├── qscore_pce_512897_2.out
+    │   │   ├── qscore_pce_512897_3.err
+    │   │   ├── qscore_pce_512897_3.out
+    │   │   ├── qscore_pce_512897_4.err
+    │   │   ├── qscore_pce_512897_4.out
+    │   │   ├── qscore_pce_512897_5.err
+    │   │   ├── qscore_pce_512897_5.out
+    │   │   ├── qscore_pce_512897_6.err
+    │   │   └── qscore_pce_512897_6.out
+    │   ├── 20260706-092044
+    │   │   ├── qscore_pce_512943_0.err
+    │   │   ├── qscore_pce_512943_0.out
+    │   │   ├── qscore_pce_512943_1.err
+    │   │   ├── qscore_pce_512943_1.out
+    │   │   ├── qscore_pce_512943_2.err
+    │   │   ├── qscore_pce_512943_2.out
+    │   │   ├── qscore_pce_512943_3.err
+    │   │   ├── qscore_pce_512943_3.out
+    │   │   ├── qscore_pce_512943_4.err
+    │   │   ├── qscore_pce_512943_4.out
+    │   │   ├── qscore_pce_512943_5.err
+    │   │   ├── qscore_pce_512943_5.out
+    │   │   ├── qscore_pce_512943_6.err
+    │   │   ├── qscore_pce_512943_6.out
+    │   │   ├── qscore_pce_512943_7.err
+    │   │   └── qscore_pce_512943_7.out
+    │   ├── 20260706-105424
+    │   │   ├── qscore_pce_512982_0.err
+    │   │   ├── qscore_pce_512982_0.out
+    │   │   ├── qscore_pce_512982_1.err
+    │   │   ├── qscore_pce_512982_1.out
+    │   │   ├── qscore_pce_512982_2.err
+    │   │   ├── qscore_pce_512982_2.out
+    │   │   ├── qscore_pce_512982_3.err
+    │   │   ├── qscore_pce_512982_3.out
+    │   │   ├── qscore_pce_512982_4.err
+    │   │   ├── qscore_pce_512982_4.out
+    │   │   ├── qscore_pce_512982_5.err
+    │   │   ├── qscore_pce_512982_5.out
+    │   │   ├── qscore_pce_512982_6.err
+    │   │   ├── qscore_pce_512982_6.out
+    │   │   ├── qscore_pce_512982_7.err
+    │   │   └── qscore_pce_512982_7.out
+    │   └── 20260706-122804
+    │       ├── qscore_pce_512999_0.err
+    │       ├── qscore_pce_512999_0.out
+    │       ├── qscore_pce_512999_1.err
+    │       ├── qscore_pce_512999_1.out
+    │       ├── qscore_pce_512999_2.err
+    │       ├── qscore_pce_512999_2.out
+    │       ├── qscore_pce_512999_3.err
+    │       ├── qscore_pce_512999_3.out
+    │       ├── qscore_pce_512999_4.err
+    │       ├── qscore_pce_512999_4.out
+    │       ├── qscore_pce_512999_5.err
+    │       ├── qscore_pce_512999_5.out
+    │       ├── qscore_pce_512999_6.err
+    │       ├── qscore_pce_512999_6.out
+    │       ├── qscore_pce_512999_7.err
+    │       ├── qscore_pce_512999_7.out
+    │       ├── qscore_pce_512999_8.err
+    │       └── qscore_pce_512999_8.out
+    ├── __pycache__
+    │   └── qscore_PCE.cpython-311.pyc
+    ├── qscore_PCE.py
+    ├── Resultados
+    │   └── PCE
+    │       ├── 20260701-132858
+    │       │   ├── n_12.json
+    │       │   ├── n_16.json
+    │       │   ├── n_20.json
+    │       │   ├── n_24.json
+    │       │   ├── n_28.json
+    │       │   ├── n_32.json
+    │       │   └── n_4.json
+    │       ├── 20260701-143809
+    │       │   ├── n_10.json
+    │       │   ├── n_15.json
+    │       │   ├── n_20.json
+    │       │   ├── n_25.json
+    │       │   └── n_5.json
+    │       ├── 20260701-150417
+    │       │   ├── n_100.json
+    │       │   ├── n_10.json
+    │       │   ├── n_110.json
+    │       │   ├── n_120.json
+    │       │   ├── n_130.json
+    │       │   ├── n_140.json
+    │       │   ├── n_15.json
+    │       │   ├── n_20.json
+    │       │   ├── n_25.json
+    │       │   ├── n_30.json
+    │       │   ├── n_35.json
+    │       │   ├── n_45.json
+    │       │   ├── n_50.json
+    │       │   ├── n_55.json
+    │       │   ├── n_5.json
+    │       │   ├── n_60.json
+    │       │   ├── n_65.json
+    │       │   ├── n_70.json
+    │       │   ├── n_75.json
+    │       │   ├── n_80.json
+    │       │   ├── n_85.json
+    │       │   ├── n_90.json
+    │       │   └── n_95.json
+    │       ├── 20260701-214508
+    │       │   ├── n_10.json
+    │       │   ├── n_110.json
+    │       │   ├── n_130.json
+    │       │   ├── n_30.json
+    │       │   ├── n_50.json
+    │       │   ├── n_70.json
+    │       │   └── n_90.json
+    │       ├── 20260702-141827
+    │       │   ├── n_100.json
+    │       │   ├── n_150.json
+    │       │   ├── n_175.json
+    │       │   ├── n_200.json
+    │       │   ├── n_225.json
+    │       │   ├── n_50.json
+    │       │   ├── qscore_pce_n50-175_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-081924.csv
+    │       │   ├── qscore_pce_n50-200_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-104132.csv
+    │       │   └── qscore_pce_n50-225_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-135506.csv
+    │       ├── 20260703-093435
+    │       │   ├── n_15.h5
+    │       │   ├── n_25.h5
+    │       │   ├── n_35.h5
+    │       │   ├── n_45.h5
+    │       │   ├── n_5.h5
+    │       │   └── qscore_pce_n5-45_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-104053.csv
+    │       ├── 20260703-124958
+    │       │   ├── n_100.h5
+    │       │   ├── n_10.h5
+    │       │   ├── n_150.h5
+    │       │   ├── n_50.h5
+    │       │   └── qscore_pce_n10-150_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260705-221152.csv
+    │       ├── 20260705-221327
+    │       ├── 20260706-092044
+    │       │   ├── n_150.h5
+    │       │   └── n_200.h5
+    │       ├── 20260706-105424
+    │       │   ├── n_10.h5
+    │       │   ├── n_20.h5
+    │       │   ├── n_30.h5
+    │       │   ├── n_40.h5
+    │       │   ├── n_50.h5
+    │       │   ├── n_60.h5
+    │       │   ├── n_70.h5
+    │       │   ├── n_80.h5
+    │       │   ├── qscore_pce_n10-60_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-120421.csv
+    │       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-122624.csv
+    │       └── 20260706-122804
+    │           ├── n_100.h5
+    │           ├── n_10.h5
+    │           ├── n_25.h5
+    │           ├── n_50.h5
+    │           ├── n_75.h5
+    │           └── qscore_pce_n10-100_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260707-084016.csv
+    ├── run_qscore_PCE_array.sh
+    ├── run_qscore_PCE.py
+    ├── run_qscore_PCE_single_n.py
+    └── submit_qscore_PCE_array.sh
+
+62 directories, 290 files

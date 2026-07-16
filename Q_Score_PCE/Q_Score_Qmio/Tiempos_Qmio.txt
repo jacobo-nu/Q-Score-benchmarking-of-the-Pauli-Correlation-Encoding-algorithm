@@ -1,0 +1,24 @@
+           Name     MaxWall                   MaxTRES MaxSubmitPU MaxJobsPU 
+--------------- ----------- ------------------------- ----------- --------- 
+         normal                                                             
+      ilk_short    06:00:00                  cpu=1280         200       100 
+     ilk_medium  3-00:00:00                  cpu=1280         125       100 
+       ilk_long  7-00:00:00                   cpu=640          30        30 
+   ilk_ondemand 42-00:00:00                   cpu=320          10        10 
+      a64_short    06:00:00                   cpu=768         200       100 
+     a64_medium  3-00:00:00                   cpu=768         125       100 
+       a64_long  7-00:00:00                   cpu=288          30        30 
+   a64_ondemand 42-00:00:00                   cpu=144          10        10 
+            qpu    02:00:00                    node=1           5         1 
+ilk_interactive    08:00:00                    node=1           2         2 
+a64_interactive    08:00:00                    node=1           2         2 
+       qpu_long  7-00:00:00                    node=1           2         1 
+     classa_ilk  3-00:00:00                   cpu=320         100        40 
+     classb_ilk  2-00:00:00                   cpu=320          15         3 
+     classc_ilk  1-00:00:00                   cpu=320           5         1 
+     classa_a64  3-00:00:00                   cpu=192         100        40 
+     classb_a64  2-00:00:00                   cpu=192          15         3 
+     classc_a64  1-00:00:00                   cpu=192           5         1 
+     classa_qpu    02:00:00                    node=1           5         1 
+     classb_qpu    01:00:00                    node=1           5         1 
+     classc_qpu    00:10:00                    node=1           5         1 

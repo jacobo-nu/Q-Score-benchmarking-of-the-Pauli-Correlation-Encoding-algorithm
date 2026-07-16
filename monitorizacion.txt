@@ -1,0 +1,107 @@
+COMANDOS DE MONITORIZACIÓN — FT3 (Finisterrae III)
+=====================================================
+
+
+1. VER MIS JOBS EN COLA / EJECUCIÓN
+-------------------------------------------
+squeue -u tec_app6
+
+# Con más columnas útiles (partición, QOS, estado, tiempo corrido, nodos, nodo asignado)
+squeue -u tec_app6 -o "%.10i %.9P %.10q %.20j %.2t %.10M %.6D %N"
+
+# Ver motivo de espera si está pendiente (columna final)
+squeue -u tec_app6 -o "%.10i %.9P %.10q %.12l %.2t %R"
+
+# Estimación de cuándo podría arrancar (no siempre disponible)
+squeue -u tec_app6 --start
+
+
+2. DETALLE COMPLETO DE UN JOB CONCRETO
+-------------------------------------------
+scontrol show job <jobid>
+
+# Útil para ver: recursos pedidos (TRES), nodo asignado, razón exacta de espera,
+# comando y directorio de trabajo, límite de tiempo, etc.
+
+
+3. HISTÓRICO DE JOBS (terminados, fallidos, cancelados)
+-------------------------------------------
+sacct -u tec_app6 --starttime=today -o JobID,JobName,State,Elapsed,Start,End
+
+# Ver el QOS y límite de tiempo con el que corrió un job concreto
+sacct -j <jobid> -o JobID,QOS,Timelimit,Elapsed,State
+
+
+4. CANCELAR JOBS
+-------------------------------------------
+scancel <jobid>                  # cancela un job concreto
+scancel -u tec_app6               # cancela TODOS mis jobs (cuidado)
+
+
+5. ESTADO DE LOS NODOS / PARTICIÓN (para ver si hay recursos libres)
+-------------------------------------------
+# Resumen por partición: tiempo límite, nodos, cpus, memoria
+sinfo -o "%P %l %D %c %m"
+
+# Detalle nodo a nodo de una partición concreta (estado: idle/mixed/allocated/drained...)
+sinfo -p medium -N -l
+sinfo -p short -N -l
+sinfo -p long -N -l
+
+# Ver además el GRES (nº de GPUs libres/ocupadas por nodo)
+sinfo -p medium -o "%N %t %G"
+
+
+6. LÍMITES DE QOS (tiempo máximo, jobs simultáneos permitidos)
+-------------------------------------------
+# MaxWall (tiempo máx por job) para cada QOS
+sacctmgr show qos format=Name%20,MaxWall,MaxTRESPerUser,MaxJobsPerUser
+
+# Límite de jobs simultáneos / envíos totales por QOS (causa típica de
+# error "QOSMaxSubmitJobPerUserLimit")
+sacctmgr show qos format=Name%15,MaxSubmitPU,MaxJobsPU
+
+# QOS permitidas para una partición concreta
+scontrol show partition medium | grep -i qos
+
+
+7. ENTRAR AL NODO DONDE CORRE MI JOB (para ver uso real de recursos)
+-------------------------------------------
+# Paso 1: averiguar el nodo (columna NODELIST/%N)
+squeue -u tec_app6 -o "%.10i %.9P %.20j %.2t %.10M %.6D %N"
+
+# Paso 2: conectar por ssh a ese nodo
+ssh <nombre_nodo>          # ej: ssh a100-24
+
+
+8. UNA VEZ DENTRO DEL NODO: USO DE CPU Y MEMORIA
+-------------------------------------------
+htop                        # vista interactiva, pulsar "u" para filtrar por usuario
+htop -u tec_app6             # filtrado directo
+
+ps -u tec_app6 -o pid,%cpu,%mem,etime,cmd    # procesos propios, con tiempo corrido (etime)
+
+
+9. UNA VEZ DENTRO DEL NODO: USO DE GPU (solo FT3, no aplica en QMIO)
+-------------------------------------------
+nvidia-smi                  # foto puntual: %GPU-Util, memoria VRAM usada, PID del proceso
+
+watch -n 1 nvidia-smi        # actualización en vivo cada segundo
+
+
+10. UNA VEZ DENTRO DEL NODO: USO DE DISCO / I/O
+-------------------------------------------
+iotop -u tec_app6             # puede requerir permisos sudo
+iostat -x 1                  # alternativa sin filtrar por usuario, vista general del nodo
+
+
+NOTAS
+=====================================================
+- En FT3 el --qos es SIEMPRE obligatorio y explícito al mandar el job
+  (a diferencia de QMIO, donde no se especifica y se autoasigna según --time).
+- El límite real que puede bloquear un envío no siempre es el de la partición
+  (sinfo) ni el de tiempo (MaxWall) — puede ser MaxJobsPU/MaxSubmitPU, el
+  número de jobs simultáneos permitidos bajo ese QOS.
+- "ReqNodeNotAvail" en la razón de un job pendiente = no hay recursos físicos
+  libres ahora mismo (hay que esperar). "Priority" = sí hay recursos, pero
+  hay jobs con más prioridad por delante en la cola de fair-share.

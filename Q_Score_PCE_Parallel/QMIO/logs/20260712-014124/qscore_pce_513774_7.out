@@ -1,0 +1,51 @@
+slurmstepd: info: Setting TMPDIR to /scratch/513782. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260712-014124
+Array ID: 7  (entrada: 300:0:8)
+num_nodes: 300   chunk: 1/8
+num_instances (total del n): 100
+num_workers: 16
+optimizer: DIFFERENTIALEVOLUTION   maxiter: 25   k: 3
+backend: AER   shots: 0
+==============================
+
+==============================
+num_nodes     = 300
+num_instances = 100 (total del n)
+chunk         = 1/8
+num_workers   = 16
+k             = 3
+optimizer     = DIFFERENTIALEVOLUTION
+maxiter       = 25
+backend       = AER
+outdir        = Resultados/PCE/20260712-014124/chunks
+==============================
+
+(num_workers ajustado de 16 a 13: este chunk solo tiene 13 instancias)
+
+✔ n=300 chunk 1/8 (13 instancias) beta_parcial=0.7055 ± 0.0180
+✔ Resultado del chunk guardado en: Resultados/PCE/20260712-014124/chunks/n_300_chunk_0_of_8.h5
+  (recuerda: esto es PARCIAL — hace falta merge_chunks_qscore_PCE.py para combinar todos los chunks de este n antes de agregar)
+Fecha fin: Sun Jul 12 07:05:45 CEST 2026
+
+*****************************************************************************
+*                                                                           *
+*                    JOB EFFICIENCY REPORT (seff 513782)                   *
+*                                                                           *
+*****************************************************************************
+
+Job ID: 513782
+Array Job ID: 513774_7
+Cluster: qmio
+User/Group: tec_app6/cesga
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 6-14:37:49
+CPU Efficiency: 93.08% of 7-02:25:36 core-walltime
+Job Wall-clock time: 05:19:33
+Memory Utilized: 13.97 GB
+Memory Efficiency: 87.32% of 16.00 GB
+
+*****************************************************************************
+

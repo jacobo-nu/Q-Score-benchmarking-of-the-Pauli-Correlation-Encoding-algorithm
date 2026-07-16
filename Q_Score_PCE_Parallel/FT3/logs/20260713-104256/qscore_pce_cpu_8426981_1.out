@@ -1,0 +1,77 @@
+slurmstepd: info: Setting TMPDIR to /scratch/8427027. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260713-104256
+Array ID: 1  (entrada: 250:1:5)
+num_nodes: 250   chunk: 2/5
+num_instances (total del n): 100
+num_workers: 16   cpus-per-task: 32
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+device: CPU   optimizer: DIFFERENTIALEVOLUTION   maxiter: 25   k: 2
+backend: AER   shots: 2048
+==============================
+
+==============================
+num_nodes     = 250
+num_instances = 100 (total del n)
+chunk         = 2/5
+num_workers   = 16
+k             = 2
+optimizer     = DIFFERENTIALEVOLUTION
+maxiter       = 25
+backend       = AER
+outdir        = Resultados/PCE/20260713-104256/chunks
+==============================
+
+[TIMING] pid=2128326 idx=76 t0=10278373.594 grafo=0.048s init_bench=0.000s run_pce=21876.847s total=21876.895s
+[TIMING] pid=2128328 idx=71 t0=10278373.594 grafo=0.047s init_bench=0.000s run_pce=21920.586s total=21920.633s
+[TIMING] pid=2128317 idx=21 t0=10278373.553 grafo=0.047s init_bench=0.000s run_pce=21945.341s total=21945.388s
+[TIMING] pid=2128314 idx=6 t0=10278373.550 grafo=0.047s init_bench=0.000s run_pce=21984.488s total=21984.534s
+[TIMING] pid=2128318 idx=26 t0=10278373.554 grafo=0.047s init_bench=0.000s run_pce=23023.393s total=23023.440s
+[TIMING] pid=2128323 idx=51 t0=10278373.572 grafo=0.048s init_bench=0.000s run_pce=23493.581s total=23493.628s
+[TIMING] pid=2128322 idx=46 t0=10278373.566 grafo=0.047s init_bench=0.000s run_pce=23552.426s total=23552.473s
+[TIMING] pid=2128316 idx=16 t0=10278373.553 grafo=0.047s init_bench=0.000s run_pce=23680.891s total=23680.939s
+[TIMING] pid=2128320 idx=36 t0=10278373.559 grafo=0.047s init_bench=0.000s run_pce=23684.381s total=23684.428s
+[TIMING] pid=2128319 idx=31 t0=10278373.557 grafo=0.047s init_bench=0.000s run_pce=24144.613s total=24144.661s
+[TIMING] pid=2128324 idx=56 t0=10278373.578 grafo=0.047s init_bench=0.000s run_pce=24158.349s total=24158.396s
+[TIMING] pid=2128321 idx=41 t0=10278373.563 grafo=0.047s init_bench=0.000s run_pce=24271.921s total=24271.968s
+[TIMING] pid=2128315 idx=11 t0=10278373.550 grafo=0.047s init_bench=0.000s run_pce=24479.726s total=24479.774s
+[TIMING] pid=2128311 idx=1 t0=10278373.545 grafo=0.047s init_bench=0.000s run_pce=24650.792s total=24650.839s
+[TIMING] pid=2128327 idx=66 t0=10278373.594 grafo=0.047s init_bench=0.000s run_pce=24849.210s total=24849.257s
+[TIMING] pid=2128325 idx=61 t0=10278373.578 grafo=0.047s init_bench=0.000s run_pce=25117.554s total=25117.601s
+[TIMING] pid=2128326 idx=81 t0=10300250.491 grafo=0.047s init_bench=0.000s run_pce=8150.380s total=8150.427s
+[TIMING] pid=2128317 idx=91 t0=10300318.943 grafo=0.045s init_bench=0.000s run_pce=8152.693s total=8152.738s
+[TIMING] pid=2128314 idx=96 t0=10300358.086 grafo=0.047s init_bench=0.000s run_pce=8348.931s total=8348.978s
+[TIMING] pid=2128328 idx=86 t0=10300294.230 grafo=0.050s init_bench=0.000s run_pce=8887.816s total=8887.866s
+
+✔ n=250 chunk 2/5 (20 instancias) beta_parcial=0.2032 ± 0.0150
+✔ Resultado del chunk guardado en: Resultados/PCE/20260713-104256/chunks/n_250_chunk_1_of_5.h5
+  (recuerda: esto es PARCIAL — hace falta merge_chunks_qscore_PCE.py para combinar todos los chunks de este n antes de agregar)
+Fecha fin: Mon Jul 13 07:18:19 PM CEST 2026
+
+*****************************************************************************
+*                                                                           *
+*                    JOB EFFICIENCY REPORT (seff 8427027)                   *
+*                                                                           *
+*****************************************************************************
+
+Job ID: 8427027
+Array Job ID: 8426981_1
+Cluster: finisterrae3
+User/Group: tec_app6/cesga
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 17:30:28
+CPU Efficiency: 6.39% of 11-09:56:48 core-walltime
+Job Wall-clock time: 08:33:39
+Memory Utilized: 7.67 GB
+Memory Efficiency: 23.98% of 32.00 GB
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++   Memory Efficiency is too small. Please review the requested memory. ++
+ ++ It seems that you do not need that much memory so we recommend        ++
+ ++ requesting less memory in other similar jobs.                         ++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+*****************************************************************************
+

@@ -1,0 +1,72 @@
+slurmstepd: info: Setting TMPDIR to /scratch/8427004. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260713-104338
+Array ID: 20  (entrada: 250:6:7)
+num_nodes: 250   chunk: 7/7
+num_instances (total del n): 100
+num_workers: 16   cpus-per-task: 32
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+device: CPU   optimizer: DIFFERENTIALEVOLUTION   maxiter: 25   k: 3
+backend: AER   shots: 2048
+==============================
+
+==============================
+num_nodes     = 250
+num_instances = 100 (total del n)
+chunk         = 7/7
+num_workers   = 16
+k             = 3
+optimizer     = DIFFERENTIALEVOLUTION
+maxiter       = 25
+backend       = AER
+outdir        = Resultados/PCE/20260713-104338/chunks
+==============================
+
+(num_workers ajustado de 16 a 14: este chunk solo tiene 14 instancias)
+[TIMING] pid=3774900 idx=97 t0=10308266.843 grafo=0.046s init_bench=0.000s run_pce=14478.010s total=14478.057s
+[TIMING] pid=3774889 idx=27 t0=10308266.807 grafo=0.048s init_bench=0.000s run_pce=14558.047s total=14558.095s
+[TIMING] pid=3774895 idx=69 t0=10308266.827 grafo=0.048s init_bench=0.000s run_pce=14563.097s total=14563.144s
+[TIMING] pid=3774894 idx=62 t0=10308266.824 grafo=0.047s init_bench=0.000s run_pce=14570.040s total=14570.088s
+[TIMING] pid=3774898 idx=83 t0=10308266.835 grafo=0.050s init_bench=0.000s run_pce=14581.785s total=14581.835s
+[TIMING] pid=3774887 idx=13 t0=10308266.803 grafo=0.047s init_bench=0.000s run_pce=15101.346s total=15101.393s
+[TIMING] pid=3774899 idx=90 t0=10308266.839 grafo=0.048s init_bench=0.000s run_pce=15241.924s total=15241.971s
+[TIMING] pid=3774884 idx=6 t0=10308266.800 grafo=0.047s init_bench=0.000s run_pce=15375.415s total=15375.462s
+[TIMING] pid=3774891 idx=41 t0=10308266.814 grafo=0.048s init_bench=0.000s run_pce=15454.876s total=15454.924s
+[TIMING] pid=3774890 idx=34 t0=10308266.811 grafo=0.048s init_bench=0.000s run_pce=15565.965s total=15566.013s
+[TIMING] pid=3774888 idx=20 t0=10308266.804 grafo=0.047s init_bench=0.000s run_pce=15575.160s total=15575.208s
+[TIMING] pid=3774892 idx=48 t0=10308266.817 grafo=0.048s init_bench=0.000s run_pce=15604.715s total=15604.763s
+[TIMING] pid=3774896 idx=76 t0=10308266.831 grafo=0.048s init_bench=0.000s run_pce=15611.151s total=15611.199s
+[TIMING] pid=3774893 idx=55 t0=10308266.820 grafo=0.048s init_bench=0.000s run_pce=15657.276s total=15657.323s
+
+✔ n=250 chunk 7/7 (14 instancias) beta_parcial=0.2419 ± 0.0185
+✔ Resultado del chunk guardado en: Resultados/PCE/20260713-104338/chunks/n_250_chunk_6_of_7.h5
+  (recuerda: esto es PARCIAL — hace falta merge_chunks_qscore_PCE.py para combinar todos los chunks de este n antes de agregar)
+Fecha fin: Mon Jul 13 11:20:25 PM CEST 2026
+
+*****************************************************************************
+*                                                                           *
+*                    JOB EFFICIENCY REPORT (seff 8427004)                   *
+*                                                                           *
+*****************************************************************************
+
+Job ID: 8427004
+Array Job ID: 8427004_20
+Cluster: finisterrae3
+User/Group: tec_app6/cesga
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 10:12:51
+CPU Efficiency: 7.34% of 5-19:13:36 core-walltime
+Job Wall-clock time: 04:21:03
+Memory Utilized: 8.40 GB
+Memory Efficiency: 26.24% of 32.00 GB
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++   Memory Efficiency is too small. Please review the requested memory. ++
+ ++ It seems that you do not need that much memory so we recommend        ++
+ ++ requesting less memory in other similar jobs.                         ++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+*****************************************************************************
+

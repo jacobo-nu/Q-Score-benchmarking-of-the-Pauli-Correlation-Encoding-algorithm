@@ -1,0 +1,54 @@
+slurmstepd: info: Setting TMPDIR to /scratch/513524. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260708-092232
+Array ID: 5
+num_nodes: 125
+num_instances: 100
+optimizer: DIFFERENTIALEVOLUTION
+cpus_per_task: 16
+sim_device: CPU
+sim_method: statevector
+==============================
+
+==============================
+num_nodes    = 125
+num_instances= 100
+k            = 2
+optimizer    = DIFFERENTIALEVOLUTION
+maxiter      = 25
+outdir       = Resultados/PCE/20260708-092232
+shots        = 8192
+==============================
+
+
+✔ n=125 beta=0.3607 ± 0.0104 (PASSED) shots=8192
+✔ Resultado guardado en: Resultados/PCE/20260708-092232/n_125.h5
+Fecha fin: Thu Jul  9 17:26:56 CEST 2026
+
+*****************************************************************************
+*                                                                           *
+*                    JOB EFFICIENCY REPORT (seff 513524)                   *
+*                                                                           *
+*****************************************************************************
+
+Job ID: 513524
+Array Job ID: 513518_5
+Cluster: qmio
+User/Group: tec_app6/cesga
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 16
+CPU Utilized: 20-19:12:30
+CPU Efficiency: 97.28% of 21-09:10:08 core-walltime
+Job Wall-clock time: 1-08:04:23
+Memory Utilized: 581.37 MB
+Memory Efficiency: 3.55% of 16.00 GB
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++   Memory Efficiency is too small. Please review the requested memory. ++
+ ++ It seems that you do not need that much memory so we recommend        ++
+ ++ requesting less memory in other similar jobs.                         ++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+*****************************************************************************
+

@@ -1,0 +1,54 @@
+slurmstepd: info: Setting TMPDIR to /scratch/8256145. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260707-135034
+Array ID: 4  (sublista CPU: 10 25 50 75 100 125 150 175 200 225 250 275 300 325 350 375 400 425 450 475 500 525 550)
+num_nodes: 100
+num_instances: 100
+optimizer: DIFFERENTIALEVOLUTION
+device: CPU
+sim_method: statevector
+shots: 0
+==============================
+
+==============================
+num_nodes    = 100
+num_instances= 100
+k            = 3
+optimizer    = DIFFERENTIALEVOLUTION
+maxiter      = 25
+outdir       = Resultados/PCE/20260707-135034
+shots        = exacto (statevector)
+==============================
+
+
+✔ n=100 beta=0.8994 ± 0.0131 (PASSED) shots=exact
+✔ Resultado guardado en: Resultados/PCE/20260707-135034/n_100.h5
+Fecha fin: Wed Jul  8 03:43:06 AM CEST 2026
+
+*****************************************************************************
+*                                                                           *
+*                    JOB EFFICIENCY REPORT (seff 8256145)                   *
+*                                                                           *
+*****************************************************************************
+
+Job ID: 8256145
+Array Job ID: 8255862_4
+Cluster: finisterrae3
+User/Group: tec_app6/cesga
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 13:37:38
+CPU Efficiency: 3.12% of 18-04:45:52 core-walltime
+Job Wall-clock time: 13:38:56
+Memory Utilized: 523.26 MB
+Memory Efficiency: 3.19% of 16.00 GB
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++   Memory Efficiency is too small. Please review the requested memory. ++
+ ++ It seems that you do not need that much memory so we recommend        ++
+ ++ requesting less memory in other similar jobs.                         ++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+*****************************************************************************
+

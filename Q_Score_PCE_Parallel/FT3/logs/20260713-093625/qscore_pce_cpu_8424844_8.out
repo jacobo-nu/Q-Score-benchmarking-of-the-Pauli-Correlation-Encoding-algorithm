@@ -1,0 +1,24 @@
+slurmstepd: info: Setting TMPDIR to /scratch/8424859. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260713-093625
+Array ID: 8  (entrada: 225:0:4)
+num_nodes: 225   chunk: 1/4
+num_instances (total del n): 100
+num_workers: 16   cpus-per-task: 32
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+device: CPU   optimizer: DIFFERENTIALEVOLUTION   maxiter: 25   k: 2
+backend: AER   shots: 8192
+==============================
+
+==============================
+num_nodes     = 225
+num_instances = 100 (total del n)
+chunk         = 1/4
+num_workers   = 16
+k             = 2
+optimizer     = DIFFERENTIALEVOLUTION
+maxiter       = 25
+backend       = AER
+outdir        = Resultados/PCE/20260713-093625/chunks
+==============================
+

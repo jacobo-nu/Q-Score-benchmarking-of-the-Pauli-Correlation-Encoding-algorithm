@@ -1,0 +1,73 @@
+slurmstepd: info: Setting TMPDIR to /scratch/8430593. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260713-104338
+Array ID: 7  (entrada: 225:0:7)
+num_nodes: 225   chunk: 1/7
+num_instances (total del n): 100
+num_workers: 16   cpus-per-task: 32
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+device: CPU   optimizer: DIFFERENTIALEVOLUTION   maxiter: 25   k: 3
+backend: AER   shots: 2048
+==============================
+
+==============================
+num_nodes     = 225
+num_instances = 100 (total del n)
+chunk         = 1/7
+num_workers   = 16
+k             = 3
+optimizer     = DIFFERENTIALEVOLUTION
+maxiter       = 25
+backend       = AER
+outdir        = Resultados/PCE/20260713-104338/chunks
+==============================
+
+(num_workers ajustado de 16 a 15: este chunk solo tiene 15 instancias)
+[TIMING] pid=4056875 idx=14 t0=38041289.509 grafo=0.039s init_bench=0.000s run_pce=13938.938s total=13938.977s
+[TIMING] pid=4056874 idx=7 t0=38041289.505 grafo=0.039s init_bench=0.000s run_pce=13953.623s total=13953.662s
+[TIMING] pid=4056882 idx=63 t0=38041289.531 grafo=0.039s init_bench=0.000s run_pce=14699.418s total=14699.457s
+[TIMING] pid=4056886 idx=91 t0=38041289.546 grafo=0.039s init_bench=0.000s run_pce=14708.450s total=14708.489s
+[TIMING] pid=4056876 idx=21 t0=38041289.512 grafo=0.038s init_bench=0.000s run_pce=14757.009s total=14757.047s
+[TIMING] pid=4056877 idx=28 t0=38041289.515 grafo=0.039s init_bench=0.000s run_pce=14763.081s total=14763.120s
+[TIMING] pid=4056880 idx=49 t0=38041289.525 grafo=0.039s init_bench=0.000s run_pce=14782.528s total=14782.567s
+[TIMING] pid=4056887 idx=98 t0=38041289.551 grafo=0.039s init_bench=0.000s run_pce=14787.341s total=14787.380s
+[TIMING] pid=4056879 idx=42 t0=38041289.521 grafo=0.039s init_bench=0.000s run_pce=14812.536s total=14812.576s
+[TIMING] pid=4056878 idx=35 t0=38041289.518 grafo=0.039s init_bench=0.000s run_pce=14859.375s total=14859.413s
+[TIMING] pid=4056885 idx=84 t0=38041289.542 grafo=0.039s init_bench=0.000s run_pce=14900.761s total=14900.800s
+[TIMING] pid=4056884 idx=77 t0=38041289.539 grafo=0.039s init_bench=0.000s run_pce=14930.182s total=14930.221s
+[TIMING] pid=4056883 idx=70 t0=38041289.535 grafo=0.039s init_bench=0.000s run_pce=14934.776s total=14934.816s
+[TIMING] pid=4056881 idx=56 t0=38041289.528 grafo=0.040s init_bench=0.000s run_pce=15021.597s total=15021.637s
+[TIMING] pid=4056871 idx=0 t0=38041289.505 grafo=0.039s init_bench=0.000s run_pce=15039.605s total=15039.644s
+
+✔ n=225 chunk 1/7 (15 instancias) beta_parcial=0.2353 ± 0.0241
+✔ Resultado del chunk guardado en: Resultados/PCE/20260713-104338/chunks/n_225_chunk_0_of_7.h5
+  (recuerda: esto es PARCIAL — hace falta merge_chunks_qscore_PCE.py para combinar todos los chunks de este n antes de agregar)
+Fecha fin: Mon Jul 13 04:40:33 PM CEST 2026
+
+*****************************************************************************
+*                                                                           *
+*                    JOB EFFICIENCY REPORT (seff 8430593)                   *
+*                                                                           *
+*****************************************************************************
+
+Job ID: 8430593
+Array Job ID: 8427004_7
+Cluster: finisterrae3
+User/Group: tec_app6/cesga
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 09:02:47
+CPU Efficiency: 6.76% of 5-13:45:36 core-walltime
+Job Wall-clock time: 04:10:48
+Memory Utilized: 8.27 GB
+Memory Efficiency: 25.84% of 32.00 GB
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++   Memory Efficiency is too small. Please review the requested memory. ++
+ ++ It seems that you do not need that much memory so we recommend        ++
+ ++ requesting less memory in other similar jobs.                         ++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+*****************************************************************************
+

@@ -1,0 +1,308 @@
+qmio/hpc unloaded
+gcccore/12.3.0 unloaded
+binutils/2.40 unloaded
+gcc/12.3.0 unloaded
+sqlite/3.45.3 unloaded
+libffi/3.4.4 unloaded
+python/3.11.9 unloaded
+rust/1.88.0 unloaded
+imkl/2023.2.0 unloaded
+ninja/1.9.0 unloaded
+meson/1.5.2-python-3.11.9 unloaded
+meson-python/0.16.0-python-3.11.9 unloaded
+cython/3.0.9-python-3.11.9 unloaded
+numpy/1.26.4-python-3.11.9 unloaded
+pythran/0.15.0-python-3.11.9 unloaded
+pybind11/2.13.6-python-3.11.9 unloaded
+xsimd/12.1.1 unloaded
+scipy/1.13.0-python-3.11.9 unloaded
+llvm/16.0.0 unloaded
+gmp/6.3.0 unloaded
+mpfr/4.2.1 unloaded
+mpc/1.3.1 unloaded
+flint/3.1.2 unloaded
+symengine/0.11.2 unloaded
+symengine-python/0.11.0-python-3.11.9 unloaded
+spdlog/1.9.2 unloaded
+pylatexenc/2.10-python-3.11.9 unloaded
+libgd/2.3.3 unloaded
+nasm/2.16.03 unloaded
+libjpeg-turbo/3.0.2 unloaded
+matplotlib/3.6.3-python-3.11.9 unloaded
+pandas/2.2.2-python-3.11.9 unloaded
+seaborn/0.12.2-python-3.11.9 unloaded
+qiskit/2.2.3-python-3.11.9 unloaded
+qmio-run/0.5.1-python-3.11.9 unloaded
+qmio-tools/0.2.1-python-3.11.9 unloaded
+        Preparing the environment for use of the sistema software stack.
+        Please rebuild modules cache: module --ignore-cache avail
+     
+qmio/hpc loaded
+gcccore/12.3.0 loaded
+binutils/2.40 loaded
+gcc/12.3.0 loaded
+sqlite/3.45.3 loaded
+libffi/3.4.4 loaded
+python/3.11.9 loaded
+rust/1.88.0 loaded
+
+imkl/2023.2.0 loaded
+ninja/1.9.0 loaded
+meson/1.5.2-python-3.11.9 loaded
+meson-python/0.16.0-python-3.11.9 loaded
+cython/3.0.9-python-3.11.9 loaded
+numpy/1.26.4-python-3.11.9 loaded
+pythran/0.15.0-python-3.11.9 loaded
+pybind11/2.13.6-python-3.11.9 loaded
+xsimd/12.1.1 loaded
+scipy/1.13.0-python-3.11.9 loaded
+llvm/16.0.0 loaded
+gmp/6.3.0 loaded
+mpfr/4.2.1 loaded
+mpc/1.3.1 loaded
+flint/3.1.2 loaded
+symengine/0.11.2 loaded
+symengine-python/0.11.0-python-3.11.9 loaded
+spdlog/1.9.2 loaded
+pylatexenc/2.10-python-3.11.9 loaded
+libgd/2.3.3 loaded
+nasm/2.16.03 loaded
+libjpeg-turbo/3.0.2 loaded
+matplotlib/3.6.3-python-3.11.9 loaded
+pandas/2.2.2-python-3.11.9 loaded
+seaborn/0.12.2-python-3.11.9 loaded
+qiskit/2.2.3-python-3.11.9 loaded
+qmio-run/0.5.1-python-3.11.9 loaded
+qmio-tools/0.2.1-python-3.11.9 loaded
+gcc/12.3.0 unloaded
+rust/1.88.0 unloaded
+pythran/0.15.0-python-3.11.9 unloaded
+scipy/1.13.0-python-3.11.9 unloaded
+qiskit/2.2.3-python-3.11.9 unloaded
+qmio-run/0.5.1-python-3.11.9 unloaded
+qmio-tools/0.2.1-python-3.11.9 unloaded
+gcc/12.3.0 loaded
+rust/1.88.0 loaded
+pythran/0.15.0-python-3.11.9 loaded
+scipy/1.13.0-python-3.11.9 loaded
+qiskit/2.2.3-python-3.11.9 loaded
+qmio-run/0.5.1-python-3.11.9 loaded
+qmio-tools/0.2.1-python-3.11.9 loaded
+qiskit/2.2.3-python-3.11.9 unloaded
+qiskit/2.2.3-python-3.11.9 loaded
+qmio-tools/0.2.1-python-3.11.9 unloaded
+qmio-tools/0.2.1-python-3.11.9 loaded
+2026-07-05 22:13:33,310 [INFO] [PCE] Ejecutando 50 grafos con 400 nodos.
+2026-07-05 22:13:33,310 [INFO] [PCE] n=400 usa 17 qubits (k=2).
+2026-07-05 22:13:33,535 [INFO] Pass: ContainsInstruction - 0.25344 (ms)
+2026-07-05 22:13:33,535 [INFO] Pass: UnitarySynthesis - 0.00739 (ms)
+2026-07-05 22:13:33,535 [INFO] Pass: HighLevelSynthesis - 0.00596 (ms)
+2026-07-05 22:13:33,536 [INFO] Pass: BasisTranslator - 0.05221 (ms)
+2026-07-05 22:13:33,536 [INFO] Pass: ElidePermutations - 0.00548 (ms)
+2026-07-05 22:13:33,536 [INFO] Pass: RemoveDiagonalGatesBeforeMeasure - 0.00858 (ms)
+2026-07-05 22:13:33,536 [INFO] Pass: RemoveIdentityEquivalent - 0.00739 (ms)
+2026-07-05 22:13:33,536 [INFO] Pass: InverseCancellation - 0.01073 (ms)
+2026-07-05 22:13:33,536 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00262 (ms)
+2026-07-05 22:13:33,536 [INFO] Pass: CommutativeCancellation - 0.11587 (ms)
+2026-07-05 22:13:33,537 [INFO] Pass: ConsolidateBlocks - 1.23882 (ms)
+2026-07-05 22:13:33,537 [INFO] Pass: Split2QUnitaries - 0.00405 (ms)
+2026-07-05 22:13:33,537 [INFO] Pass: UnitarySynthesis - 0.00620 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: HighLevelSynthesis - 12.48479 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: BasisTranslator - 0.08106 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: ConsolidateBlocks - 0.05603 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: UnitarySynthesis - 0.00477 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: Depth - 0.03076 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: FixedPoint - 0.00596 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: Size - 0.00453 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: FixedPoint - 0.00358 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: RemoveIdentityEquivalent - 0.00405 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: Optimize1qGatesDecomposition - 0.03648 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: CommutativeCancellation - 0.10848 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00215 (ms)
+2026-07-05 22:13:33,550 [INFO] Pass: GatesInBasis - 0.03672 (ms)
+2026-07-05 22:13:33,551 [INFO] Pass: Depth - 0.02456 (ms)
+2026-07-05 22:13:33,551 [INFO] Pass: FixedPoint - 0.00381 (ms)
+2026-07-05 22:13:33,551 [INFO] Pass: Size - 0.00215 (ms)
+2026-07-05 22:13:33,551 [INFO] Pass: FixedPoint - 0.00286 (ms)
+2026-07-05 22:13:33,551 [INFO] Pass: ContainsInstruction - 0.00596 (ms)
+2026-07-05 22:13:33,551 [INFO] Total Transpile Time - 110.11672 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: ContainsInstruction - 0.01049 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: UnitarySynthesis - 0.00620 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: HighLevelSynthesis - 0.00477 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: BasisTranslator - 0.04601 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: ElidePermutations - 0.00405 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: RemoveDiagonalGatesBeforeMeasure - 0.00525 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: RemoveIdentityEquivalent - 0.00691 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: InverseCancellation - 0.02885 (ms)
+2026-07-05 22:13:33,604 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00858 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: CommutativeCancellation - 0.10109 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: ConsolidateBlocks - 0.04792 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: Split2QUnitaries - 0.00262 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: UnitarySynthesis - 0.00501 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: HighLevelSynthesis - 0.04315 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: BasisTranslator - 0.07534 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: ConsolidateBlocks - 0.05388 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: UnitarySynthesis - 0.00429 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: Depth - 0.02861 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: FixedPoint - 0.00501 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: Size - 0.00286 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: FixedPoint - 0.00310 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: RemoveIdentityEquivalent - 0.00548 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: Optimize1qGatesDecomposition - 0.17166 (ms)
+2026-07-05 22:13:33,605 [INFO] Pass: CommutativeCancellation - 0.11110 (ms)
+2026-07-05 22:13:33,606 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00238 (ms)
+2026-07-05 22:13:33,606 [INFO] Pass: GatesInBasis - 0.03624 (ms)
+2026-07-05 22:13:33,606 [INFO] Pass: Depth - 0.02766 (ms)
+2026-07-05 22:13:33,606 [INFO] Pass: FixedPoint - 0.00405 (ms)
+2026-07-05 22:13:33,606 [INFO] Pass: Size - 0.00262 (ms)
+2026-07-05 22:13:33,606 [INFO] Pass: FixedPoint - 0.00525 (ms)
+2026-07-05 22:13:33,606 [INFO] Pass: ContainsInstruction - 0.00525 (ms)
+2026-07-05 22:13:33,606 [INFO] Total Transpile Time - 54.70824 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: ContainsInstruction - 0.01001 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: UnitarySynthesis - 0.00668 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: HighLevelSynthesis - 0.00477 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: BasisTranslator - 0.04625 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: ElidePermutations - 0.00405 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: RemoveDiagonalGatesBeforeMeasure - 0.00525 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: RemoveIdentityEquivalent - 0.00763 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: InverseCancellation - 0.02789 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00238 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: CommutativeCancellation - 0.09871 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: ConsolidateBlocks - 0.05007 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: Split2QUnitaries - 0.00262 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: UnitarySynthesis - 0.00930 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: HighLevelSynthesis - 0.04601 (ms)
+2026-07-05 22:13:33,659 [INFO] Pass: BasisTranslator - 0.07868 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: ConsolidateBlocks - 0.05722 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: UnitarySynthesis - 0.00477 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: Depth - 0.02956 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: FixedPoint - 0.00501 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: Size - 0.00334 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: FixedPoint - 0.00286 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: RemoveIdentityEquivalent - 0.00691 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: Optimize1qGatesDecomposition - 0.19097 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: CommutativeCancellation - 0.10753 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00191 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: GatesInBasis - 0.03576 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: Depth - 0.02766 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: FixedPoint - 0.00381 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: Size - 0.00262 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: FixedPoint - 0.00358 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: RemoveIdentityEquivalent - 0.00644 (ms)
+2026-07-05 22:13:33,660 [INFO] Pass: Optimize1qGatesDecomposition - 0.17285 (ms)
+2026-07-05 22:13:33,661 [INFO] Pass: CommutativeCancellation - 0.10514 (ms)
+2026-07-05 22:13:33,661 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00215 (ms)
+2026-07-05 22:13:33,661 [INFO] Pass: GatesInBasis - 0.03552 (ms)
+2026-07-05 22:13:33,661 [INFO] Pass: Depth - 0.02694 (ms)
+2026-07-05 22:13:33,661 [INFO] Pass: FixedPoint - 0.00334 (ms)
+2026-07-05 22:13:33,661 [INFO] Pass: Size - 0.00215 (ms)
+2026-07-05 22:13:33,661 [INFO] Pass: FixedPoint - 0.00310 (ms)
+2026-07-05 22:13:33,661 [INFO] Pass: ContainsInstruction - 0.00525 (ms)
+2026-07-05 22:13:33,661 [INFO] Total Transpile Time - 54.81815 (ms)
+2026-07-05 22:13:36,802 [INFO] [PCE] Aer metadata (1ª ejecución de este proceso): device=CPU method=matrix_product_state fusion_enabled=False
+2026-07-08 12:34:28,784 [INFO] Pass: ContainsInstruction - 0.01645 (ms)
+2026-07-08 12:34:28,784 [INFO] Pass: UnitarySynthesis - 0.01097 (ms)
+2026-07-08 12:34:28,784 [INFO] Pass: HighLevelSynthesis - 0.00882 (ms)
+2026-07-08 12:34:28,784 [INFO] Pass: BasisTranslator - 0.08726 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: ElidePermutations - 0.00668 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: RemoveDiagonalGatesBeforeMeasure - 0.00811 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: RemoveIdentityEquivalent - 0.00954 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: InverseCancellation - 0.00620 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00501 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: CommutativeCancellation - 0.11063 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: ConsolidateBlocks - 0.12565 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: Split2QUnitaries - 0.00429 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: UnitarySynthesis - 0.00572 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: HighLevelSynthesis - 0.04458 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: BasisTranslator - 0.08178 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: ConsolidateBlocks - 0.06580 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: UnitarySynthesis - 0.00501 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: Depth - 0.03266 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: FixedPoint - 0.00572 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: Size - 0.00501 (ms)
+2026-07-08 12:34:28,785 [INFO] Pass: FixedPoint - 0.00334 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: RemoveIdentityEquivalent - 0.00405 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: Optimize1qGatesDecomposition - 0.04125 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: CommutativeCancellation - 0.09823 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00191 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: GatesInBasis - 0.03767 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: Depth - 0.02551 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: FixedPoint - 0.00358 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: Size - 0.00262 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: FixedPoint - 0.00286 (ms)
+2026-07-08 12:34:28,786 [INFO] Pass: ContainsInstruction - 0.00501 (ms)
+2026-07-08 12:34:28,786 [INFO] Total Transpile Time - 300.91906 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: ContainsInstruction - 0.00930 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: UnitarySynthesis - 0.00620 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: HighLevelSynthesis - 0.00453 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: BasisTranslator - 0.04792 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: ElidePermutations - 0.00429 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: RemoveDiagonalGatesBeforeMeasure - 0.00620 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: RemoveIdentityEquivalent - 0.00668 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: InverseCancellation - 0.02742 (ms)
+2026-07-08 12:34:28,839 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00238 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: CommutativeCancellation - 0.09894 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: ConsolidateBlocks - 0.04768 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: Split2QUnitaries - 0.00286 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: UnitarySynthesis - 0.00501 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: HighLevelSynthesis - 0.04244 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: BasisTranslator - 0.07701 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: ConsolidateBlocks - 0.05293 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: UnitarySynthesis - 0.00429 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: Depth - 0.02837 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: FixedPoint - 0.00525 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: Size - 0.00286 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: FixedPoint - 0.00310 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: RemoveIdentityEquivalent - 0.00525 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: Optimize1qGatesDecomposition - 0.16999 (ms)
+2026-07-08 12:34:28,840 [INFO] Pass: CommutativeCancellation - 0.11349 (ms)
+2026-07-08 12:34:28,841 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00215 (ms)
+2026-07-08 12:34:28,841 [INFO] Pass: GatesInBasis - 0.03624 (ms)
+2026-07-08 12:34:28,841 [INFO] Pass: Depth - 0.02670 (ms)
+2026-07-08 12:34:28,841 [INFO] Pass: FixedPoint - 0.00358 (ms)
+2026-07-08 12:34:28,841 [INFO] Pass: Size - 0.00238 (ms)
+2026-07-08 12:34:28,841 [INFO] Pass: FixedPoint - 0.00310 (ms)
+2026-07-08 12:34:28,841 [INFO] Pass: ContainsInstruction - 0.00525 (ms)
+2026-07-08 12:34:28,841 [INFO] Total Transpile Time - 54.05116 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: ContainsInstruction - 0.00906 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: UnitarySynthesis - 0.00596 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: HighLevelSynthesis - 0.00381 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: BasisTranslator - 0.04649 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: ElidePermutations - 0.00381 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: RemoveDiagonalGatesBeforeMeasure - 0.00525 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: RemoveIdentityEquivalent - 0.00715 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: InverseCancellation - 0.02742 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00191 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: CommutativeCancellation - 0.09823 (ms)
+2026-07-08 12:34:28,892 [INFO] Pass: ConsolidateBlocks - 0.05627 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: Split2QUnitaries - 0.00286 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: UnitarySynthesis - 0.00525 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: HighLevelSynthesis - 0.04721 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: BasisTranslator - 0.07868 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: ConsolidateBlocks - 0.05603 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: UnitarySynthesis - 0.00429 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: Depth - 0.02861 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: FixedPoint - 0.00429 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: Size - 0.00358 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: FixedPoint - 0.00310 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: RemoveIdentityEquivalent - 0.00691 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: Optimize1qGatesDecomposition - 0.18072 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: CommutativeCancellation - 0.10133 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00191 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: GatesInBasis - 0.03624 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: Depth - 0.03386 (ms)
+2026-07-08 12:34:28,893 [INFO] Pass: FixedPoint - 0.00405 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: Size - 0.00238 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: FixedPoint - 0.00334 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: RemoveIdentityEquivalent - 0.00644 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: Optimize1qGatesDecomposition - 0.16284 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: CommutativeCancellation - 0.09370 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: ContractIdleWiresInControlFlow - 0.00167 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: GatesInBasis - 0.03600 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: Depth - 0.02527 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: FixedPoint - 0.00334 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: Size - 0.00215 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: FixedPoint - 0.00310 (ms)
+2026-07-08 12:34:28,894 [INFO] Pass: ContainsInstruction - 0.00525 (ms)
+2026-07-08 12:34:28,894 [INFO] Total Transpile Time - 52.98233 (ms)
+slurmstepd-c7-9: error: *** JOB 512899 ON c7-9 CANCELLED AT 2026-07-10T22:13:54 DUE TO TIME LIMIT ***

@@ -1,0 +1,28 @@
+          Name     MaxWall                   MaxTRES MaxSubmitPU MaxJobsPU 
+--------------- ----------- ------------------------- ----------- --------- 
+         normal                                                             
+          short                              cpu=2048         100        50 
+         medium                              cpu=2048          50        30 
+           long                              cpu=2048          10         5 
+        requeue                              cpu=2048          10         5 
+       ondemand                              cpu=1024          10         2 
+            viz                                                 2         2 
+        class_a  3-00:00:00                  cpu=4096         100        40 
+        class_b  2-00:00:00                  cpu=4096          15        10 
+        class_c  1-00:00:00                  cpu=4096           5         1 
+        special                             cpu=16384          10         2 
+      clk_short    06:00:00                    node=1         400       200 
+     clk_medium  3-00:00:00                    node=1         250       200 
+       clk_long  7-00:00:00                    node=1          60        60 
+   clk_ondemand 42-00:00:00                    node=1          20        20 
+     epyc_short    06:00:00                    node=1         200       100 
+    epyc_medium  3-00:00:00                    node=1         200       100 
+           ligo  2-00:00:00                    node=1                       
+          otoom                                                             
+      hwl_short    06:00:00                    node=1         400       400 
+     hwl_medium  3-00:00:00                    node=1         250       240 
+       hwl_long  7-00:00:00                    node=1          60        60 
+   hwl_ondemand 42-00:00:00                    node=1          20        20 
+     cesga_prio 42-00:00:00                   cpu=640          90        60 
+          uscmg  3-00:00:00                   cpu=320         325       320 
+         hwlmpi 

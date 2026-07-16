@@ -1,0 +1,57 @@
+slurmstepd: info: Setting TMPDIR to /scratch/513777. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260712-014124
+Array ID: 2  (entrada: 250:2:7)
+num_nodes: 250   chunk: 3/7
+num_instances (total del n): 100
+num_workers: 16
+optimizer: DIFFERENTIALEVOLUTION   maxiter: 25   k: 3
+backend: AER   shots: 0
+==============================
+
+==============================
+num_nodes     = 250
+num_instances = 100 (total del n)
+chunk         = 3/7
+num_workers   = 16
+k             = 3
+optimizer     = DIFFERENTIALEVOLUTION
+maxiter       = 25
+backend       = AER
+outdir        = Resultados/PCE/20260712-014124/chunks
+==============================
+
+(num_workers ajustado de 16 a 14: este chunk solo tiene 14 instancias)
+
+✔ n=250 chunk 3/7 (14 instancias) beta_parcial=0.7639 ± 0.0272
+✔ Resultado del chunk guardado en: Resultados/PCE/20260712-014124/chunks/n_250_chunk_2_of_7.h5
+  (recuerda: esto es PARCIAL — hace falta merge_chunks_qscore_PCE.py para combinar todos los chunks de este n antes de agregar)
+Fecha fin: Sun Jul 12 03:50:33 CEST 2026
+
+*****************************************************************************
+*                                                                           *
+*                    JOB EFFICIENCY REPORT (seff 513777)                   *
+*                                                                           *
+*****************************************************************************
+
+Job ID: 513777
+Array Job ID: 513774_2
+Cluster: qmio
+User/Group: tec_app6/cesga
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 2-13:31:01
+CPU Efficiency: 89.46% of 2-20:45:52 core-walltime
+Job Wall-clock time: 02:08:56
+Memory Utilized: 10.68 GB
+Memory Efficiency: 66.73% of 16.00 GB
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++   Memory Efficiency is too small. Please review the requested memory. ++
+ ++ It seems that you do not need that much memory so we recommend        ++
+ ++ requesting less memory in other similar jobs.                         ++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+*****************************************************************************
+

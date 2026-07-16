@@ -1,0 +1,266 @@
+========================================================================
+ COMANDOS RECURRENTES — Q-Score benchmark (PCE)
+ QMIO (CPU) y Finisterrae III / FT3 (GPU) — CESGA
+========================================================================
+Estructura general (dentro de qscore/, copiada a HOME para uso compartido
+con el FT3 vía rsync):
+
+    qscore/Q_Score_PCE/
+    ├── Q_Score_Qmio/     <- todo lo de QMIO (CPU)
+    └── Q_Score_FT3/      <- todo lo de FT3 (GPU)
+
+Ambas subcarpetas comparten los mismos ficheros .py (qscore_PCE.py,
+aggregate_qscore_PCE.py, run_qscore_PCE.py, run_qscore_PCE_single_n.py) —
+son idénticos en ambos sitios, cópialos tal cual entre carpetas cuando
+actualices uno. El comportamiento CPU/GPU lo decide en tiempo de
+ejecución la variable de entorno PCE_DEVICE (ver más abajo), no el .py.
+
+Lo que SÍ es distinto entre carpetas: job.sh, run_qscore_PCE_array.sh,
+run_qscore_PCE_packed.sh, submit_qscore_PCE.sh (módulos y directivas
+#SBATCH propias de cada cluster).
+
+
+########################################################################
+ A) QMIO (CPU) — Q_Score_Qmio/
+########################################################################
+
+------------------------------------------------------------------------
+A.1. MÓDULOS
+------------------------------------------------------------------------
+module load qmio/hpc gcc/12.3.0 qiskit/2.2.3-python-3.11.9 qmio-tools/0.2.1-python-3.11.9
+
+No se usa entorno virtual. Si falta algún paquete:
+    pip install --user networkx xarray
+
+
+------------------------------------------------------------------------
+A.2. FLUJO EN SERIE (pruebas rápidas, un solo proceso)
+------------------------------------------------------------------------
+    qrun run_qscore_PCE.py
+
+qrun (función de shell ya definida):
+    qrun () { sbatch --job-name=${1%.py} --output=${1%.py}.o%j --error=${1%.py}.o%j job.sh $1 }
+
+Requiere job.sh en el directorio actual (con los module load correctos y
+"python $1" como última línea). Ajustar tiempo/memoria en job.sh ANTES
+de cada qrun — no acepta argumentos extra.
+
+
+------------------------------------------------------------------------
+A.3. FLUJO PARALELO — JOB ARRAY (único modo disponible en QMIO)
+------------------------------------------------------------------------
+a) Editar si hace falta, en run_qscore_PCE_array.sh:
+     N_LIST=(...)              <- tamaños de nodo a evaluar
+     #SBATCH --array=0-N       <- debe coincidir con len(N_LIST)-1
+     NUM_INSTANCES, K, MAXITER, OPTIMIZER (mayúsculas si es
+     DIFFERENTIALEVOLUTION), SEED
+
+b) Mandar (genera un RUN_ID nuevo automáticamente):
+     ./submit_qscore_PCE.sh
+     ./submit_qscore_PCE.sh array      <- equivalente explícito
+
+   Crea: logs/<RUN_ID>/, Resultados/PCE/<RUN_ID>/, Imagenes/PCE/<RUN_ID>/
+
+c) Seguimiento en tiempo real:
+     tail -f logs/<RUN_ID>/qscore_pce_*.out
+
+d) Estado de las tareas en cola/ejecución:
+     squeue -u $USER
+
+e) Cuando termina TODO el array, agregar y generar la figura:
+     python aggregate_qscore_PCE.py --run-id <RUN_ID>
+
+f) (Opcional) Limpiar logs crudos tras agregar (concatena en summary.log
+   y borra los sueltos — solo cuando NINGUNA tarea de ese RUN_ID siga
+   en squeue):
+     python aggregate_qscore_PCE.py --run-id <RUN_ID> --cleanup-logs
+
+g) Borrar un run entero:
+     rm -rf logs/<RUN_ID> Resultados/PCE/<RUN_ID> Imagenes/PCE/<RUN_ID>
+
+
+########################################################################
+ B) FT3 (GPU, A100) — Q_Score_FT3/
+########################################################################
+
+------------------------------------------------------------------------
+B.1. MÓDULOS
+------------------------------------------------------------------------
+module load cesga/2022 gcc/system qiskit/1.2.4-aer-gpu-cu11
+
+Esta build trae Aer con GPU (cuQuantum/cuStateVec + runtime CUDA 11)
+autocontenido — NO hace falta cargar ningún módulo cuda/ aparte, ni
+instalar nada por pip.
+
+NO usar qiskit/0.23.6-aer-gpu: es una build ligada a Python 3.6, que no
+tiene 'dataclasses' en la librería estándar (rompe qscore_PCE.py) y usa
+una API de Qiskit muy antigua.
+
+Variable de entorno que activa la GPU en el propio código Python:
+    export PCE_DEVICE=GPU
+(ya está puesta dentro de job.sh, run_qscore_PCE_array.sh y
+run_qscore_PCE_packed.sh — no hace falta exportarla a mano salvo que
+quieras forzar CPU en FT3 para comparar: export PCE_DEVICE=CPU, o
+simplemente no definirla, ya que "CPU" es el valor por defecto si la
+variable no existe).
+
+
+------------------------------------------------------------------------
+B.2. FLUJO EN SERIE (pruebas rápidas, un solo proceso)
+------------------------------------------------------------------------
+    qrun run_qscore_PCE.py
+
+Usa job.sh de Q_Score_FT3/ (partición short, --gres=gpu:a100:1,
+--cpus-per-task=32 — ver notación GPU/CPU en B.4).
+
+
+------------------------------------------------------------------------
+B.3. FLUJO PARALELO — DOS MODOS DISPONIBLES
+------------------------------------------------------------------------
+El wrapper es el mismo para ambos, cambia solo el argumento:
+
+    ./submit_qscore_PCE.sh              <- por defecto: modo "array"
+    ./submit_qscore_PCE.sh array        <- job array (run_qscore_PCE_array.sh)
+    ./submit_qscore_PCE.sh packed       <- srun empaquetado (run_qscore_PCE_packed.sh)
+
+En ambos modos, crea: logs/<RUN_ID>/, Resultados/PCE/<RUN_ID>/,
+Imagenes/PCE/<RUN_ID>/ — el resto del flujo (seguimiento, agregación,
+limpieza, borrado) es IDÉNTICO a QMIO (ver A.3, puntos c-g), solo
+cambia cómo se lanza el job.
+
+--- Modo "array" (igual que QMIO, pero con GPU) -----------------------
+Cada n es un job SLURM independiente (<jobid>_<idx>). Compite por su
+propio hueco en cola; útil si el cluster está muy cargado (encaja
+piezas pequeñas más fácil que un bloque grande).
+
+--- Modo "packed" (recomendado con poca carga en el cluster) ----------
+Un único job SLURM reserva de golpe tantas GPUs como valores tenga
+N_LIST, y lanza cada n como un "step" de srun en paralelo dentro de esa
+misma reserva — no compite tarea por tarea en la cola, solo una vez.
+
+El wrapper YA CALCULA SOLO cuántas GPUs/tareas hacen falta: cuenta los
+elementos de N_LIST dentro de run_qscore_PCE_packed.sh y se los pasa a
+sbatch como --ntasks=N --gpus=N (SLURM decide cuántos nodos concretos
+necesita — en 'medium' hay 2 GPUs por nodo). No hay que calcular nada
+a mano al cambiar N_LIST, solo editar la lista y volver a lanzar.
+
+
+------------------------------------------------------------------------
+B.4. NOTACIÓN GPU EN SLURM (FT3) — QUÉ CAMBIA RESPECTO A QMIO
+------------------------------------------------------------------------
+QMIO no tiene GPUs (partición 'ilk'), así que nunca se pedía nada de
+esto — todo el cómputo iba por CPU pura.
+
+En FT3 aparecen dos piezas nuevas:
+
+  --gres=gpu:a100:N     Pide N GPUs A100 POR NODO (usado en job.sh y en
+                         run_qscore_PCE_array.sh).
+  --gpus=N              Pide N GPUs EN TOTAL para el job entero, sin fijar
+                         nodos ni repartir por nodo — SLURM decide cuántos
+                         nodos hacen falta (usado en run_qscore_PCE_packed.sh
+                         y dentro de cada 'srun --gpus=1').
+  --cpus-per-task=32    OBLIGATORIO junto con cualquiera de los dos de
+                         arriba: es una política propia de FT3 (32 CPUs
+                         por cada GPU, ratio físico de los nodos A100).
+                         Sin esto, sbatch lo rechaza con:
+                         "CPUs requested should be (nodes * gpus/node * 32)"
+
+Consecuencia práctica: pedir 1 GPU en FT3 implica reservar 32 CPUs junto
+con ella — cada job tuyo ocupa buena parte (o la totalidad) de un nodo
+A100, aunque el código Python no use más de un hilo activo.
+
+Comprobar límites de tiempo de una partición antes de lanzar:
+    sinfo -p medium -o "%P %l"
+    sinfo -p short  -o "%P %l"
+    sinfo -p long   -o "%P %l"
+
+Particiones con GPU disponibles en FT3 (sinfo -o "%P %G"):
+    short (por defecto, límite 6h), medium (3 días), long (7 días),
+    ondemand, requeue (todas con gpu:a100:*), viz (gpu:t4:*)
+
+
+########################################################################
+ C) COMÚN A AMBOS CLUSTERS
+########################################################################
+
+------------------------------------------------------------------------
+C.1. GESTIÓN DE JOBS SLURM
+------------------------------------------------------------------------
+Ver tus jobs:                     squeue -u $USER
+Cancelar un job (o array entero): scancel <jobid>
+Cancelar una tarea de un array:   scancel <jobid>_<índice>
+Cancelar un rango de un array:    scancel <jobid>_[10-20]
+Cancelar todos los tuyos:         scancel -u $USER
+Confirmar que ya no queda nada:   squeue -u $USER | grep <jobid>
+
+
+------------------------------------------------------------------------
+C.2. AGREGACIÓN DE RESULTADOS (aggregate_qscore_PCE.py)
+------------------------------------------------------------------------
+    python aggregate_qscore_PCE.py --run-id <RUN_ID>
+    python aggregate_qscore_PCE.py --run-id <RUN_ID> --cleanup-logs
+
+- Solo lee los n_*.json ya escritos en Resultados/PCE/<RUN_ID>/ — no
+  relanza cómputo. Se puede correr sobre un run TODAVÍA EN MARCHA sin
+  problema (grafica lo que haya en ese instante); no interfiere con las
+  tareas que sigan corriendo.
+- Cada ejecución genera una figura NUEVA con timestamp propio en
+  Imagenes/PCE/<RUN_ID>/ — no sobreescribe la anterior.
+- La tabla de consola muestra, por cada n: beta ± std, PASSED/FAILED,
+  qubits=<N> (si el JSON lo tiene) y t=<d:hh:mm:ss> (si el JSON tiene
+  duration_seconds). Retrocompatible: si un JSON antiguo no tiene esas
+  claves, simplemente se omiten en esa línea, sin fallar.
+- La gráfica marca con una línea azul punteada el primer n de cada
+  salto de nº de qubits (no se repite en los n siguientes que sigan
+  usando el mismo número), y anota en negro el nº de qubits del primer
+  punto del rango (el "punto de partida", que no es un salto en sí).
+
+
+------------------------------------------------------------------------
+C.3. COPIAR / SINCRONIZAR ENTRE PARTICIONES (Q_SWAP -> HOME, para FT3)
+------------------------------------------------------------------------
+    mkdir -p /home/cesga/tec_app6/Practicas_verano
+
+    rsync -avh --progress \
+      --exclude='__pycache__' \
+      --exclude='*.pyc' \
+      /mnt/Q_SWAP/tec_app6/qscore/ \
+      /home/cesga/tec_app6/Practicas_verano/qscore/
+
+Verificar que la copia está completa (solo debería listar exclusiones):
+    diff <(cd /mnt/Q_SWAP/tec_app6/qscore/ && find . | sort) \
+         <(cd /home/cesga/tec_app6/Practicas_verano/qscore/ && find . | sort)
+
+Tamaño de una carpeta:
+    du -sh /mnt/Q_SWAP/tec_app6/qscore/
+
+(HOME tiene 1TB de cuota — con margen de sobra, no hace falta excluir
+runs antiguos ni preocuparse por espacio antes de copiar.)
+
+
+------------------------------------------------------------------------
+C.4. NOTAS RÁPIDAS A RECORDAR
+------------------------------------------------------------------------
+- OPTIMIZER siempre en mayúsculas cuando sea DIFFERENTIALEVOLUTION (el
+  código lo compara en minúsculas internamente, pero por convención
+  propia se escribe así en los .sh).
+- run_qscore_PCE_array.sh / run_qscore_PCE_packed.sh NUNCA se lanzan
+  directo con sbatch — siempre a través de ./submit_qscore_PCE.sh (crea
+  las carpetas de logs/resultados/imágenes ANTES de que SLURM resuelva
+  las rutas de -o/-e, algo que no se puede hacer dentro del propio .sh).
+  Si se lanzan directo sin el wrapper, RUN_ID cae en "manual" y falla
+  porque logs/manual/ no existe todavía.
+- Los imports en los scripts son PLANOS (from qscore_PCE import ...),
+  no de paquete — todos los .py deben vivir en el mismo directorio, sin
+  subcarpetas tipo Q_Score_PCE.qscore_PCE.
+- Los .sh deben tener fin de línea Unix (LF), no Windows (CRLF) — si
+  sbatch da "This does not look like a batch script", comprobar con
+  cat -A archivo.sh (busca ^M al final de las líneas) y arreglar con
+  sed -i 's/\r$//' archivo.sh
+- A partir de qué n merece la pena la GPU: depende del nº de QUBITS
+  (num_qubits(n, k=2)), no de n directamente — crece muy despacio con
+  n (n=150 -> ~11-12 qubits, n=350 -> ~16-19 qubits). Por debajo de
+  ~15-18 qubits, CPU y GPU van parecido; la GPU se nota claramente a
+  partir de ~20 qubits. La forma fiable de saberlo para este código es
+  comparar el "t=" de un mismo n entre un run de QMIO y uno de FT3.
+========================================================================

@@ -1,0 +1,1201 @@
+.
+├── comandos.txt
+├── estructura.txt
+├── monitorizacion.txt
+├── __Pruebas_FT3
+│   ├── Imagenes
+│   │   ├── 20260702-094152
+│   │   │   └── qscore_pce_n5-30_k2_DIFFERENTIALEVOLUTION_maxiter30_seed42_20260702-133219.png
+│   │   ├── 20260703-083242
+│   │   │   └── qscore_pce_n50-250_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-083927.png
+│   │   └── 20260706-130414
+│   │       └── qscore_pce_n350-350_k2_DIFFERENTIALEVOLUTION_maxiter15_seed42_20260709-084706.png
+│   ├── logs
+│   │   ├── 20260702-094152
+│   │   │   ├── 20260706-130414
+│   │   │   │   └── summary.log
+│   │   │   └── summary.log
+│   │   └── 20260703-083242
+│   │       ├── qscore_pce_8130155_0.err
+│   │       ├── qscore_pce_8130155_0.out
+│   │       ├── qscore_pce_8130155_10.err
+│   │       ├── qscore_pce_8130155_10.out
+│   │       ├── qscore_pce_8130155_1.err
+│   │       ├── qscore_pce_8130155_1.out
+│   │       ├── qscore_pce_8130155_2.err
+│   │       ├── qscore_pce_8130155_2.out
+│   │       ├── qscore_pce_8130155_3.err
+│   │       ├── qscore_pce_8130155_3.out
+│   │       ├── qscore_pce_8130155_4.err
+│   │       ├── qscore_pce_8130155_4.out
+│   │       ├── qscore_pce_8130155_5.err
+│   │       ├── qscore_pce_8130155_5.out
+│   │       ├── qscore_pce_8130155_6.err
+│   │       ├── qscore_pce_8130155_6.out
+│   │       ├── qscore_pce_8130155_7.err
+│   │       ├── qscore_pce_8130155_7.out
+│   │       ├── qscore_pce_8130155_8.err
+│   │       ├── qscore_pce_8130155_8.out
+│   │       ├── qscore_pce_8130155_9.err
+│   │       └── qscore_pce_8130155_9.out
+│   └── Resultados
+│       ├── 20260702-094152
+│       │   ├── n_10.json
+│       │   ├── n_15.json
+│       │   ├── n_20.json
+│       │   ├── n_25.json
+│       │   ├── n_30.json
+│       │   ├── n_5.json
+│       │   └── qscore_pce_n5-30_k2_DIFFERENTIALEVOLUTION_maxiter30_seed42_20260702-133219.csv
+│       ├── 20260703-083242
+│       │   ├── n_100.h5
+│       │   ├── n_150.h5
+│       │   ├── n_175.h5
+│       │   ├── n_200.h5
+│       │   ├── n_225.h5
+│       │   ├── n_250.h5
+│       │   ├── n_50.h5
+│       │   └── qscore_pce_n50-250_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-083927.csv
+│       └── 20260706-130414
+│           ├── n_350.h5
+│           └── qscore_pce_n350-350_k2_DIFFERENTIALEVOLUTION_maxiter15_seed42_20260709-084706.csv
+├── __Pruebas_iniciales
+│   ├── hoja_de_ruta.py
+│   ├── job1.sh
+│   ├── job.sh
+│   ├── PCE_12_nodes_10_instances.png
+│   ├── PCE_16_nodes_50_instances.png
+│   ├── PCE_24_nodes_50_instances.png
+│   ├── PCE_64_nodes_50_instances_maxiter25.png
+│   ├── PCE_8_nodes_10_instances.png
+│   ├── qscore_pce_aggregated.png
+│   ├── qscore_PCE.py
+│   ├── run_qscore_PCE_12n_10in.o512144
+│   ├── run_qscore_PCE_16n_50in.o512146
+│   ├── run_qscore_PCE2_24n_50in.o512153
+│   └── run_qscore_PCE_8n_10in.o512143
+├── __Pruebas_Qmio
+│   ├── Imagenes
+│   │   ├── 20260701-132858
+│   │   │   └── qscore_pce_n4-32_k2_DIFFERENTIALEVOLUTION_maxiter10_seed42_20260701-140559.png
+│   │   ├── 20260701-143809
+│   │   │   └── qscore_pce_n5-25_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260701-150157.png
+│   │   ├── 20260701-150417
+│   │   │   ├── qscore_pce_n5-140_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260702-081555.png
+│   │   │   └── qscore_pce_n5-140_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260702-112508.png
+│   │   ├── 20260701-214508
+│   │   │   ├── qscore_pce_n10-110_k2_DIFFERENTIALEVOLUTION_maxiter30_seed42_20260702-081720.png
+│   │   │   └── qscore_pce_n10-130_k2_DIFFERENTIALEVOLUTION_maxiter30_seed42_20260702-103740.png
+│   │   ├── 20260702-141827
+│   │   │   ├── qscore_pce_n50-200_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-104132.png
+│   │   │   └── qscore_pce_n50-225_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-135506.png
+│   │   ├── 20260703-093435
+│   │   │   └── qscore_pce_n5-45_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-104053.png
+│   │   ├── 20260703-124958
+│   │   │   └── qscore_pce_n10-150_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260705-221152.png
+│   │   ├── 20260705-221327
+│   │   ├── 20260706-105424
+│   │   │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-104407.png
+│   │   ├── 20260706-122804
+│   │   │   └── qscore_pce_n10-100_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260707-103115.png
+│   │   ├── 20260707-104633
+│   │   │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-123326.png
+│   │   ├── 20260707-104735
+│   │   │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-135253.png
+│   │   └── 20260707-123256
+│   │       └── qscore_pce_n10-80_k2_ROTOSOLVE_maxiter20_seed42_20260707-135311.png
+│   ├── logs
+│   │   ├── 20260701-132858
+│   │   │   └── summary.log
+│   │   ├── 20260701-143809
+│   │   │   └── summary.log
+│   │   ├── 20260701-150417
+│   │   │   └── summary.log
+│   │   ├── 20260701-214508
+│   │   │   ├── qscore_pce_512325_0.err
+│   │   │   ├── qscore_pce_512325_0.out
+│   │   │   ├── qscore_pce_512325_10.err
+│   │   │   ├── qscore_pce_512325_10.out
+│   │   │   ├── qscore_pce_512325_11.err
+│   │   │   ├── qscore_pce_512325_11.out
+│   │   │   ├── qscore_pce_512325_12.err
+│   │   │   ├── qscore_pce_512325_12.out
+│   │   │   ├── qscore_pce_512325_13.err
+│   │   │   ├── qscore_pce_512325_13.out
+│   │   │   ├── qscore_pce_512325_14.err
+│   │   │   ├── qscore_pce_512325_14.out
+│   │   │   ├── qscore_pce_512325_15.err
+│   │   │   ├── qscore_pce_512325_15.out
+│   │   │   ├── qscore_pce_512325_16.err
+│   │   │   ├── qscore_pce_512325_16.out
+│   │   │   ├── qscore_pce_512325_17.err
+│   │   │   ├── qscore_pce_512325_17.out
+│   │   │   ├── qscore_pce_512325_1.err
+│   │   │   ├── qscore_pce_512325_1.out
+│   │   │   ├── qscore_pce_512325_2.err
+│   │   │   ├── qscore_pce_512325_2.out
+│   │   │   ├── qscore_pce_512325_3.err
+│   │   │   ├── qscore_pce_512325_3.out
+│   │   │   ├── qscore_pce_512325_4.err
+│   │   │   ├── qscore_pce_512325_4.out
+│   │   │   ├── qscore_pce_512325_5.err
+│   │   │   ├── qscore_pce_512325_5.out
+│   │   │   ├── qscore_pce_512325_6.err
+│   │   │   ├── qscore_pce_512325_6.out
+│   │   │   ├── qscore_pce_512325_7.err
+│   │   │   ├── qscore_pce_512325_7.out
+│   │   │   ├── qscore_pce_512325_8.err
+│   │   │   ├── qscore_pce_512325_8.out
+│   │   │   ├── qscore_pce_512325_9.err
+│   │   │   └── qscore_pce_512325_9.out
+│   │   ├── 20260702-141827
+│   │   │   ├── qscore_pce_512438_0.err
+│   │   │   ├── qscore_pce_512438_0.out
+│   │   │   ├── qscore_pce_512438_10.err
+│   │   │   ├── qscore_pce_512438_10.out
+│   │   │   ├── qscore_pce_512438_1.err
+│   │   │   ├── qscore_pce_512438_1.out
+│   │   │   ├── qscore_pce_512438_2.err
+│   │   │   ├── qscore_pce_512438_2.out
+│   │   │   ├── qscore_pce_512438_3.err
+│   │   │   ├── qscore_pce_512438_3.out
+│   │   │   ├── qscore_pce_512438_4.err
+│   │   │   ├── qscore_pce_512438_4.out
+│   │   │   ├── qscore_pce_512438_5.err
+│   │   │   ├── qscore_pce_512438_5.out
+│   │   │   ├── qscore_pce_512438_6.err
+│   │   │   ├── qscore_pce_512438_6.out
+│   │   │   ├── qscore_pce_512438_7.err
+│   │   │   ├── qscore_pce_512438_7.out
+│   │   │   ├── qscore_pce_512438_8.err
+│   │   │   ├── qscore_pce_512438_8.out
+│   │   │   ├── qscore_pce_512438_9.err
+│   │   │   └── qscore_pce_512438_9.out
+│   │   ├── 20260703-093435
+│   │   │   └── summary.log
+│   │   ├── 20260703-124958
+│   │   │   └── summary.log
+│   │   ├── 20260705-221327
+│   │   │   ├── qscore_pce_512897_0.err
+│   │   │   ├── qscore_pce_512897_0.out
+│   │   │   ├── qscore_pce_512897_1.err
+│   │   │   ├── qscore_pce_512897_1.out
+│   │   │   ├── qscore_pce_512897_2.err
+│   │   │   ├── qscore_pce_512897_2.out
+│   │   │   ├── qscore_pce_512897_3.err
+│   │   │   ├── qscore_pce_512897_3.out
+│   │   │   ├── qscore_pce_512897_4.err
+│   │   │   ├── qscore_pce_512897_4.out
+│   │   │   ├── qscore_pce_512897_5.err
+│   │   │   ├── qscore_pce_512897_5.out
+│   │   │   ├── qscore_pce_512897_6.err
+│   │   │   └── qscore_pce_512897_6.out
+│   │   ├── 20260706-105424
+│   │   │   └── summary.log
+│   │   ├── 20260706-122804
+│   │   │   └── summary.log
+│   │   ├── 20260707-104633
+│   │   │   └── summary.log
+│   │   ├── 20260707-104735
+│   │   │   └── summary.log
+│   │   └── 20260707-123256
+│   │       └── summary.log
+│   └── Resultados
+│       ├── 20260701-132858
+│       │   ├── n_12.json
+│       │   ├── n_16.json
+│       │   ├── n_20.json
+│       │   ├── n_24.json
+│       │   ├── n_28.json
+│       │   ├── n_32.json
+│       │   └── n_4.json
+│       ├── 20260701-143809
+│       │   ├── n_10.json
+│       │   ├── n_15.json
+│       │   ├── n_20.json
+│       │   ├── n_25.json
+│       │   └── n_5.json
+│       ├── 20260701-150417
+│       │   ├── n_100.json
+│       │   ├── n_10.json
+│       │   ├── n_110.json
+│       │   ├── n_120.json
+│       │   ├── n_130.json
+│       │   ├── n_140.json
+│       │   ├── n_15.json
+│       │   ├── n_20.json
+│       │   ├── n_25.json
+│       │   ├── n_30.json
+│       │   ├── n_35.json
+│       │   ├── n_45.json
+│       │   ├── n_50.json
+│       │   ├── n_55.json
+│       │   ├── n_5.json
+│       │   ├── n_60.json
+│       │   ├── n_65.json
+│       │   ├── n_70.json
+│       │   ├── n_75.json
+│       │   ├── n_80.json
+│       │   ├── n_85.json
+│       │   ├── n_90.json
+│       │   └── n_95.json
+│       ├── 20260701-214508
+│       │   ├── n_10.json
+│       │   ├── n_110.json
+│       │   ├── n_130.json
+│       │   ├── n_30.json
+│       │   ├── n_50.json
+│       │   ├── n_70.json
+│       │   └── n_90.json
+│       ├── 20260702-141827
+│       │   ├── n_100.json
+│       │   ├── n_150.json
+│       │   ├── n_175.json
+│       │   ├── n_200.json
+│       │   ├── n_225.json
+│       │   ├── n_50.json
+│       │   ├── qscore_pce_n50-175_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-081924.csv
+│       │   ├── qscore_pce_n50-200_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-104132.csv
+│       │   └── qscore_pce_n50-225_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-135506.csv
+│       ├── 20260703-093435
+│       │   ├── n_15.h5
+│       │   ├── n_25.h5
+│       │   ├── n_35.h5
+│       │   ├── n_45.h5
+│       │   ├── n_5.h5
+│       │   └── qscore_pce_n5-45_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260703-104053.csv
+│       ├── 20260703-124958
+│       │   ├── n_100.h5
+│       │   ├── n_10.h5
+│       │   ├── n_150.h5
+│       │   ├── n_50.h5
+│       │   └── qscore_pce_n10-150_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260705-221152.csv
+│       ├── 20260705-221327
+│       │   ├── n_175.h5
+│       │   └── n_200.h5
+│       ├── 20260706-105424
+│       │   ├── n_10.h5
+│       │   ├── n_20.h5
+│       │   ├── n_30.h5
+│       │   ├── n_40.h5
+│       │   ├── n_50.h5
+│       │   ├── n_60.h5
+│       │   ├── n_70.h5
+│       │   ├── n_80.h5
+│       │   ├── qscore_pce_n10-60_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-120421.csv
+│       │   ├── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260706-122624.csv
+│       │   ├── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-103716.csv
+│       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-104407.csv
+│       ├── 20260706-122804
+│       │   ├── n_100.h5
+│       │   ├── n_10.h5
+│       │   ├── n_25.h5
+│       │   ├── n_50.h5
+│       │   ├── n_75.h5
+│       │   └── qscore_pce_n10-100_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260707-103115.csv
+│       ├── 20260707-104633
+│       │   ├── n_10.h5
+│       │   ├── n_20.h5
+│       │   ├── n_30.h5
+│       │   ├── n_40.h5
+│       │   ├── n_50.h5
+│       │   ├── n_60.h5
+│       │   ├── n_70.h5
+│       │   ├── n_80.h5
+│       │   ├── qscore_pce_n10-60_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-115418.csv
+│       │   ├── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-123318.csv
+│       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-123326.csv
+│       ├── 20260707-104735
+│       │   ├── n_10.h5
+│       │   ├── n_20.h5
+│       │   ├── n_30.h5
+│       │   ├── n_40.h5
+│       │   ├── n_50.h5
+│       │   ├── n_60.h5
+│       │   ├── n_70.h5
+│       │   ├── n_80.h5
+│       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260707-135253.csv
+│       └── 20260707-123256
+│           ├── n_10.h5
+│           ├── n_20.h5
+│           ├── n_30.h5
+│           ├── n_40.h5
+│           ├── n_50.h5
+│           ├── n_60.h5
+│           ├── n_70.h5
+│           ├── n_80.h5
+│           └── qscore_pce_n10-80_k2_ROTOSOLVE_maxiter20_seed42_20260707-135311.csv
+├── Q_Score_IQM
+│   ├── 5node_10inst_True.o511743
+│   ├── 5_nodes_10_instances.png
+│   ├── 8node_100inst_False.o511755
+│   ├── 8node_100inst_True.o511752
+│   ├── 8node_10inst.o511740
+│   ├── 8node_40inst.o511742
+│   ├── 8_nodes_100_instancesFalse.png
+│   ├── 8_nodes_100_instancesTrue.png
+│   ├── 8_nodes_10_instances.png
+│   ├── 8_nodes_40_instances.png
+│   ├── 8_nodes_50_instances.png
+│   ├── job.sh
+│   ├── qscore.py
+│   ├── qscore_repo.py
+│   ├── run_qscore.o511764
+│   └── run_qscore.py
+├── Q_Score_PCE
+│   ├── arbol.txt
+│   ├── Q_Score_FT3
+│   │   ├── aggregate_qscore_PCE.py
+│   │   ├── Imagenes
+│   │   │   └── PCE
+│   │   │       ├── 20260707-132755
+│   │   │       │   └── qscore_pce_n10-350_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-092102.png
+│   │   │       ├── 20260707-135034
+│   │   │       │   └── qscore_pce_n10-300_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-092208.png
+│   │   │       ├── 20260709-090947
+│   │   │       └── 20260709-092044
+│   │   │           ├── qscore_pce_n10-200_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-092353.png
+│   │   │           └── qscore_pce_n10-250_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-005013.png
+│   │   ├── job.sh
+│   │   ├── logs
+│   │   │   ├── 20260707-132755
+│   │   │   │   ├── qscore_pce_cpu_8255174_0.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_0.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_1.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_1.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_2.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_2.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_3.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_3.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_4.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_4.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_5.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_5.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_6.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_6.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_7.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_7.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_8.err
+│   │   │   │   ├── qscore_pce_cpu_8255174_8.out
+│   │   │   │   ├── qscore_pce_cpu_8255174_9.err
+│   │   │   │   └── qscore_pce_cpu_8255174_9.out
+│   │   │   ├── 20260707-135034
+│   │   │   │   ├── qscore_pce_cpu_8255862_0.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_0.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_1.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_1.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_2.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_2.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_3.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_3.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_4.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_4.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_5.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_5.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_6.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_6.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_7.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_7.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_8.err
+│   │   │   │   ├── qscore_pce_cpu_8255862_8.out
+│   │   │   │   ├── qscore_pce_cpu_8255862_9.err
+│   │   │   │   └── qscore_pce_cpu_8255862_9.out
+│   │   │   ├── 20260709-090947
+│   │   │   │   ├── qscore_pce_cpu_8315286_4.err
+│   │   │   │   └── qscore_pce_cpu_8315286_4.out
+│   │   │   └── 20260709-092044
+│   │   │       ├── qscore_pce_cpu_8315646_0.err
+│   │   │       ├── qscore_pce_cpu_8315646_0.out
+│   │   │       ├── qscore_pce_cpu_8315647_0.err
+│   │   │       ├── qscore_pce_cpu_8315647_0.out
+│   │   │       ├── qscore_pce_cpu_8315647_1.err
+│   │   │       ├── qscore_pce_cpu_8315647_1.out
+│   │   │       ├── qscore_pce_cpu_8315647_2.err
+│   │   │       ├── qscore_pce_cpu_8315647_2.out
+│   │   │       ├── qscore_pce_cpu_8315647_3.err
+│   │   │       ├── qscore_pce_cpu_8315647_3.out
+│   │   │       ├── qscore_pce_cpu_8315647_4.err
+│   │   │       ├── qscore_pce_cpu_8315647_4.out
+│   │   │       ├── qscore_pce_cpu_8315647_5.err
+│   │   │       ├── qscore_pce_cpu_8315647_5.out
+│   │   │       ├── qscore_pce_cpu_8315647_6.err
+│   │   │       ├── qscore_pce_cpu_8315647_6.out
+│   │   │       ├── qscore_pce_cpu_8315647_7.err
+│   │   │       └── qscore_pce_cpu_8315647_7.out
+│   │   ├── __pycache__
+│   │   │   └── qscore_PCE.cpython-39.pyc
+│   │   ├── qscore_PCE.py
+│   │   ├── Resultados
+│   │   │   └── PCE
+│   │   │       ├── 20260707-132755
+│   │   │       │   ├── n_100.h5
+│   │   │       │   ├── n_10.h5
+│   │   │       │   ├── n_125.h5
+│   │   │       │   ├── n_150.h5
+│   │   │       │   ├── n_175.h5
+│   │   │       │   ├── n_200.h5
+│   │   │       │   ├── n_225.h5
+│   │   │       │   ├── n_250.h5
+│   │   │       │   ├── n_25.h5
+│   │   │       │   ├── n_275.h5
+│   │   │       │   ├── n_300.h5
+│   │   │       │   ├── n_325.h5
+│   │   │       │   ├── n_350.h5
+│   │   │       │   ├── n_50.h5
+│   │   │       │   ├── n_75.h5
+│   │   │       │   ├── qscore_pce_n10-125_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260708-084102.csv
+│   │   │       │   └── qscore_pce_n10-350_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-092102.csv
+│   │   │       ├── 20260707-135034
+│   │   │       │   ├── n_100.h5
+│   │   │       │   ├── n_10.h5
+│   │   │       │   ├── n_125.h5
+│   │   │       │   ├── n_150.h5
+│   │   │       │   ├── n_175.h5
+│   │   │       │   ├── n_200.h5
+│   │   │       │   ├── n_225.h5
+│   │   │       │   ├── n_250.h5
+│   │   │       │   ├── n_25.h5
+│   │   │       │   ├── n_300.h5
+│   │   │       │   ├── n_50.h5
+│   │   │       │   ├── n_75.h5
+│   │   │       │   ├── qscore_pce_n10-100_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260708-084107.csv
+│   │   │       │   └── qscore_pce_n10-300_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-092208.csv
+│   │   │       ├── 20260709-090947
+│   │   │       └── 20260709-092044
+│   │   │           ├── n_100.h5
+│   │   │           ├── n_10.h5
+│   │   │           ├── n_125.h5
+│   │   │           ├── n_150.h5
+│   │   │           ├── n_175.h5
+│   │   │           ├── n_200.h5
+│   │   │           ├── n_225.h5
+│   │   │           ├── n_250.h5
+│   │   │           ├── n_25.h5
+│   │   │           ├── n_50.h5
+│   │   │           ├── n_75.h5
+│   │   │           ├── qscore_pce_n10-200_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-092353.csv
+│   │   │           └── qscore_pce_n10-250_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-005013.csv
+│   │   ├── run_qscore_PCE_array_cpu.sh
+│   │   ├── run_qscore_PCE_array.sh
+│   │   ├── run_qscore_PCE_packed.sh
+│   │   ├── run_qscore_PCE.py
+│   │   ├── run_qscore_PCE_single_n.py
+│   │   ├── submit_qscore_PCE.sh
+│   │   └── Tiempos_FT3
+│   └── Q_Score_Qmio
+│       ├── aggregate_qscore_PCE.py
+│       ├── Imagenes
+│       │   └── PCE
+│       │       ├── 20260706-092044
+│       │       │   └── qscore_pce_n150-400_k3_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260710-140139.png
+│       │       ├── 20260708-090056
+│       │       │   └── qscore_pce_n10-150_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-004056.png
+│       │       ├── 20260708-090526
+│       │       │   └── qscore_pce_n10-300_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-092936.png
+│       │       ├── 20260708-092232
+│       │       │   └── qscore_pce_n10-175_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-101646.png
+│       │       ├── 20260708-092350
+│       │       │   └── qscore_pce_n10-250_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-014958.png
+│       │       ├── 20260708-092600
+│       │       │   └── qscore_pce_n10-250_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-014947.png
+│       │       ├── 20260708-130618
+│       │       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter22_seed42_20260710-135752.png
+│       │       ├── 20260708-150057
+│       │       │   └── qscore_pce_n10-250_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-004017.png
+│       │       ├── 20260710-211606
+│       │       │   └── qscore_pce_n10-250_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-003924.png
+│       │       ├── FakeQmio
+│       │       │   └── qscore_pce_n10-50_k2_COBYLA_maxiter10_seed42_20260714-010327.png
+│       │       └── QMIO
+│       │           └── qscore_pce_n10-50_k2_COBYLA_maxiter10_seed42_20260716-082437.png
+│       ├── job_qpu.sh
+│       ├── job.sh
+│       ├── logs
+│       │   ├── 20260706-092044
+│       │   │   ├── qscore_pce_512943_0.err
+│       │   │   ├── qscore_pce_512943_0.out
+│       │   │   ├── qscore_pce_512943_1.err
+│       │   │   ├── qscore_pce_512943_1.out
+│       │   │   ├── qscore_pce_512943_2.err
+│       │   │   ├── qscore_pce_512943_2.out
+│       │   │   ├── qscore_pce_512943_3.err
+│       │   │   ├── qscore_pce_512943_3.out
+│       │   │   ├── qscore_pce_512943_4.err
+│       │   │   ├── qscore_pce_512943_4.out
+│       │   │   ├── qscore_pce_512943_5.err
+│       │   │   ├── qscore_pce_512943_5.out
+│       │   │   ├── qscore_pce_512943_6.err
+│       │   │   ├── qscore_pce_512943_6.out
+│       │   │   ├── qscore_pce_512943_7.err
+│       │   │   └── qscore_pce_512943_7.out
+│       │   ├── 20260708-090056
+│       │   │   ├── qscore_pce_513463_0.err
+│       │   │   ├── qscore_pce_513463_0.out
+│       │   │   ├── qscore_pce_513463_1.err
+│       │   │   ├── qscore_pce_513463_1.out
+│       │   │   ├── qscore_pce_513463_2.err
+│       │   │   ├── qscore_pce_513463_2.out
+│       │   │   ├── qscore_pce_513463_3.err
+│       │   │   ├── qscore_pce_513463_3.out
+│       │   │   ├── qscore_pce_513463_4.err
+│       │   │   ├── qscore_pce_513463_4.out
+│       │   │   ├── qscore_pce_513463_5.err
+│       │   │   ├── qscore_pce_513463_5.out
+│       │   │   ├── qscore_pce_513463_6.err
+│       │   │   └── qscore_pce_513463_6.out
+│       │   ├── 20260708-090526
+│       │   │   ├── qscore_pce_513480_0.err
+│       │   │   ├── qscore_pce_513480_0.out
+│       │   │   ├── qscore_pce_513480_1.err
+│       │   │   ├── qscore_pce_513480_1.out
+│       │   │   ├── qscore_pce_513480_2.err
+│       │   │   ├── qscore_pce_513480_2.out
+│       │   │   ├── qscore_pce_513480_3.err
+│       │   │   ├── qscore_pce_513480_3.out
+│       │   │   ├── qscore_pce_513480_4.err
+│       │   │   ├── qscore_pce_513480_4.out
+│       │   │   ├── qscore_pce_513480_5.err
+│       │   │   ├── qscore_pce_513480_5.out
+│       │   │   ├── qscore_pce_513480_6.err
+│       │   │   ├── qscore_pce_513480_6.out
+│       │   │   ├── qscore_pce_513480_7.err
+│       │   │   └── qscore_pce_513480_7.out
+│       │   ├── 20260708-092232
+│       │   │   ├── qscore_pce_513518_0.err
+│       │   │   ├── qscore_pce_513518_0.out
+│       │   │   ├── qscore_pce_513518_1.err
+│       │   │   ├── qscore_pce_513518_1.out
+│       │   │   ├── qscore_pce_513518_2.err
+│       │   │   ├── qscore_pce_513518_2.out
+│       │   │   ├── qscore_pce_513518_3.err
+│       │   │   ├── qscore_pce_513518_3.out
+│       │   │   ├── qscore_pce_513518_4.err
+│       │   │   ├── qscore_pce_513518_4.out
+│       │   │   ├── qscore_pce_513518_5.err
+│       │   │   ├── qscore_pce_513518_5.out
+│       │   │   ├── qscore_pce_513518_6.err
+│       │   │   ├── qscore_pce_513518_6.out
+│       │   │   ├── qscore_pce_513518_7.err
+│       │   │   └── qscore_pce_513518_7.out
+│       │   ├── 20260708-092350
+│       │   │   ├── qscore_pce_513531_0.err
+│       │   │   ├── qscore_pce_513531_0.out
+│       │   │   ├── qscore_pce_513531_1.err
+│       │   │   ├── qscore_pce_513531_1.out
+│       │   │   ├── qscore_pce_513531_2.err
+│       │   │   ├── qscore_pce_513531_2.out
+│       │   │   ├── qscore_pce_513531_3.err
+│       │   │   ├── qscore_pce_513531_3.out
+│       │   │   ├── qscore_pce_513531_4.err
+│       │   │   ├── qscore_pce_513531_4.out
+│       │   │   ├── qscore_pce_513531_5.err
+│       │   │   ├── qscore_pce_513531_5.out
+│       │   │   ├── qscore_pce_513531_6.err
+│       │   │   ├── qscore_pce_513531_6.out
+│       │   │   ├── qscore_pce_513531_7.err
+│       │   │   ├── qscore_pce_513531_7.out
+│       │   │   ├── qscore_pce_513531_8.err
+│       │   │   ├── qscore_pce_513531_8.out
+│       │   │   ├── qscore_pce_513531_9.err
+│       │   │   └── qscore_pce_513531_9.out
+│       │   ├── 20260708-092600
+│       │   │   ├── qscore_pce_513534_0.err
+│       │   │   ├── qscore_pce_513534_0.out
+│       │   │   ├── qscore_pce_513534_1.err
+│       │   │   ├── qscore_pce_513534_1.out
+│       │   │   ├── qscore_pce_513534_2.err
+│       │   │   ├── qscore_pce_513534_2.out
+│       │   │   ├── qscore_pce_513534_3.err
+│       │   │   ├── qscore_pce_513534_3.out
+│       │   │   ├── qscore_pce_513534_4.err
+│       │   │   ├── qscore_pce_513534_4.out
+│       │   │   ├── qscore_pce_513534_5.err
+│       │   │   ├── qscore_pce_513534_5.out
+│       │   │   ├── qscore_pce_513534_6.err
+│       │   │   ├── qscore_pce_513534_6.out
+│       │   │   ├── qscore_pce_513534_7.err
+│       │   │   └── qscore_pce_513534_7.out
+│       │   ├── 20260708-130618
+│       │   │   ├── qscore_pce_513561_0.err
+│       │   │   ├── qscore_pce_513561_0.out
+│       │   │   ├── qscore_pce_513561_1.err
+│       │   │   ├── qscore_pce_513561_1.out
+│       │   │   ├── qscore_pce_513561_2.err
+│       │   │   ├── qscore_pce_513561_2.out
+│       │   │   ├── qscore_pce_513561_3.err
+│       │   │   ├── qscore_pce_513561_3.out
+│       │   │   ├── qscore_pce_513561_4.err
+│       │   │   ├── qscore_pce_513561_4.out
+│       │   │   ├── qscore_pce_513561_5.err
+│       │   │   ├── qscore_pce_513561_5.out
+│       │   │   ├── qscore_pce_513561_6.err
+│       │   │   ├── qscore_pce_513561_6.out
+│       │   │   ├── qscore_pce_513561_7.err
+│       │   │   └── qscore_pce_513561_7.out
+│       │   ├── 20260708-150057
+│       │   │   ├── qscore_pce_513574_0.err
+│       │   │   ├── qscore_pce_513574_0.out
+│       │   │   ├── qscore_pce_513574_1.err
+│       │   │   ├── qscore_pce_513574_1.out
+│       │   │   ├── qscore_pce_513574_2.err
+│       │   │   ├── qscore_pce_513574_2.out
+│       │   │   ├── qscore_pce_513574_3.err
+│       │   │   ├── qscore_pce_513574_3.out
+│       │   │   ├── qscore_pce_513574_4.err
+│       │   │   ├── qscore_pce_513574_4.out
+│       │   │   ├── qscore_pce_513574_5.err
+│       │   │   ├── qscore_pce_513574_5.out
+│       │   │   ├── qscore_pce_513574_6.err
+│       │   │   ├── qscore_pce_513574_6.out
+│       │   │   ├── qscore_pce_513574_7.err
+│       │   │   ├── qscore_pce_513574_7.out
+│       │   │   ├── qscore_pce_513574_8.err
+│       │   │   ├── qscore_pce_513574_8.out
+│       │   │   ├── qscore_pce_513574_9.err
+│       │   │   └── qscore_pce_513574_9.out
+│       │   └── 20260710-211606
+│       │       ├── qscore_pce_513753_0.err
+│       │       ├── qscore_pce_513753_0.out
+│       │       ├── qscore_pce_513753_1.err
+│       │       ├── qscore_pce_513753_1.out
+│       │       ├── qscore_pce_513754_0.err
+│       │       ├── qscore_pce_513754_0.out
+│       │       ├── qscore_pce_513754_1.err
+│       │       ├── qscore_pce_513754_1.out
+│       │       ├── qscore_pce_513754_2.err
+│       │       ├── qscore_pce_513754_2.out
+│       │       ├── qscore_pce_513754_3.err
+│       │       ├── qscore_pce_513754_3.out
+│       │       ├── qscore_pce_513754_4.err
+│       │       ├── qscore_pce_513754_4.out
+│       │       ├── qscore_pce_513754_5.err
+│       │       └── qscore_pce_513754_5.out
+│       ├── __pycache__
+│       │   └── qscore_PCE.cpython-311.pyc
+│       ├── qscore_PCE.py
+│       ├── Resultados
+│       │   └── PCE
+│       │       ├── 20260706-092044
+│       │       │   ├── n_150.h5
+│       │       │   ├── n_200.h5
+│       │       │   ├── n_250.h5
+│       │       │   ├── n_300.h5
+│       │       │   ├── n_350.h5
+│       │       │   ├── n_400.h5
+│       │       │   ├── qscore_pce_n150-350_k3_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260709-092550.csv
+│       │       │   └── qscore_pce_n150-400_k3_DIFFERENTIALEVOLUTION_maxiter20_seed42_20260710-140139.csv
+│       │       ├── 20260708-090056
+│       │       │   ├── n_100.h5
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_125.h5
+│       │       │   ├── n_150.h5
+│       │       │   ├── n_25.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_75.h5
+│       │       │   └── qscore_pce_n10-150_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-004056.csv
+│       │       ├── 20260708-090526
+│       │       │   ├── n_100.h5
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_125.h5
+│       │       │   ├── n_150.h5
+│       │       │   ├── n_175.h5
+│       │       │   ├── n_200.h5
+│       │       │   ├── n_225.h5
+│       │       │   ├── n_250.h5
+│       │       │   ├── n_25.h5
+│       │       │   ├── n_300.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_75.h5
+│       │       │   └── qscore_pce_n10-300_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-092936.csv
+│       │       ├── 20260708-092232
+│       │       │   ├── n_100.h5
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_125.h5
+│       │       │   ├── n_150.h5
+│       │       │   ├── n_175.h5
+│       │       │   ├── n_25.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_75.h5
+│       │       │   └── qscore_pce_n10-175_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-101646.csv
+│       │       ├── 20260708-092350
+│       │       │   ├── n_100.h5
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_125.h5
+│       │       │   ├── n_150.h5
+│       │       │   ├── n_175.h5
+│       │       │   ├── n_200.h5
+│       │       │   ├── n_225.h5
+│       │       │   ├── n_250.h5
+│       │       │   ├── n_25.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_75.h5
+│       │       │   └── qscore_pce_n10-250_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-014958.csv
+│       │       ├── 20260708-092600
+│       │       │   ├── n_100.h5
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_125.h5
+│       │       │   ├── n_150.h5
+│       │       │   ├── n_175.h5
+│       │       │   ├── n_200.h5
+│       │       │   ├── n_225.h5
+│       │       │   ├── n_250.h5
+│       │       │   ├── n_25.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_75.h5
+│       │       │   └── qscore_pce_n10-250_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-014947.csv
+│       │       ├── 20260708-130618
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_20.h5
+│       │       │   ├── n_30.h5
+│       │       │   ├── n_40.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_60.h5
+│       │       │   ├── n_70.h5
+│       │       │   ├── n_80.h5
+│       │       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter22_seed42_20260710-135752.csv
+│       │       ├── 20260708-150057
+│       │       │   ├── n_100.h5
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_125.h5
+│       │       │   ├── n_150.h5
+│       │       │   ├── n_175.h5
+│       │       │   ├── n_200.h5
+│       │       │   ├── n_225.h5
+│       │       │   ├── n_250.h5
+│       │       │   ├── n_25.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_75.h5
+│       │       │   └── qscore_pce_n10-250_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-004017.csv
+│       │       ├── 20260710-211606
+│       │       │   ├── aviso.txt
+│       │       │   ├── n_100.h5
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_125.h5
+│       │       │   ├── n_150.h5
+│       │       │   ├── n_175.h5
+│       │       │   ├── n_200.h5
+│       │       │   ├── n_225.h5
+│       │       │   ├── n_250.h5
+│       │       │   ├── n_25.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_75.h5
+│       │       │   └── qscore_pce_n10-250_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260714-003924.csv
+│       │       ├── FakeQmio
+│       │       │   ├── results.txt
+│       │       │   └── run_qscore_PCE.o513981
+│       │       └── QMIO
+│       │           ├── n_10.h5
+│       │           ├── n_20.h5
+│       │           ├── n_30.h5
+│       │           ├── n_50.h5
+│       │           ├── .o513958
+│       │           ├── .o514016
+│       │           ├── .o514017
+│       │           ├── .o514018
+│       │           ├── qscore_pce_n10-50_k2_COBYLA_maxiter10_seed42_20260714-010327.csv
+│       │           ├── qscore_pce_n10-50_k2_COBYLA_maxiter10_seed42_20260716-082437.csv
+│       │           └── results.txt
+│       ├── run_qscore_PCE_array_scaled_maxiter.sh
+│       ├── run_qscore_PCE_array.sh
+│       ├── run_qscore_PCE.py
+│       ├── run_qscore_PCE_single_n.py
+│       ├── submit_qscore_PCE_array.sh
+│       ├── submit_qscore_PCE_scaled_maxiter.sh
+│       ├── test_qmio_backend.py
+│       └── Tiempos_Qmio.txt
+├── Q_Score_PCE_Parallel
+│   ├── FT3
+│   │   ├── aggregate_qscore_PCE.py
+│   │   ├── Imagenes
+│   │   │   └── PCE
+│   │   │       ├── 20260712-012142
+│   │   │       ├── 20260712-143055
+│   │   │       ├── 20260712-220132
+│   │   │       ├── 20260713-093625
+│   │   │       ├── 20260713-104256
+│   │   │       └── 20260713-104338
+│   │   ├── lanzar_test_nodos.sh
+│   │   ├── logs
+│   │   │   ├── 20260712-220132
+│   │   │   │   ├── qscore_pce_cpu_8413559_0.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_0.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_10.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_10.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_11.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_11.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_12.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_12.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_13.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_13.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_14.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_14.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_15.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_15.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_16.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_16.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_17.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_17.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_18.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_18.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_19.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_19.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_1.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_1.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_20.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_20.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_2.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_2.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_3.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_3.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_4.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_4.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_5.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_5.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_6.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_6.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_7.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_7.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_8.err
+│   │   │   │   ├── qscore_pce_cpu_8413559_8.out
+│   │   │   │   ├── qscore_pce_cpu_8413559_9.err
+│   │   │   │   └── qscore_pce_cpu_8413559_9.out
+│   │   │   ├── 20260713-093625
+│   │   │   │   ├── qscore_pce_cpu_8424844_0.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_0.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_10.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_10.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_11.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_11.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_12.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_12.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_13.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_13.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_14.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_14.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_15.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_15.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_16.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_16.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_1.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_1.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_2.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_2.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_3.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_3.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_4.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_4.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_5.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_5.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_6.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_6.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_7.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_7.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_8.err
+│   │   │   │   ├── qscore_pce_cpu_8424844_8.out
+│   │   │   │   ├── qscore_pce_cpu_8424844_9.err
+│   │   │   │   └── qscore_pce_cpu_8424844_9.out
+│   │   │   ├── 20260713-104256
+│   │   │   │   ├── qscore_pce_cpu_8426981_0.err
+│   │   │   │   ├── qscore_pce_cpu_8426981_0.out
+│   │   │   │   ├── qscore_pce_cpu_8426981_1.err
+│   │   │   │   ├── qscore_pce_cpu_8426981_1.out
+│   │   │   │   ├── qscore_pce_cpu_8426981_2.err
+│   │   │   │   ├── qscore_pce_cpu_8426981_2.out
+│   │   │   │   ├── qscore_pce_cpu_8426981_3.err
+│   │   │   │   ├── qscore_pce_cpu_8426981_3.out
+│   │   │   │   ├── qscore_pce_cpu_8426981_4.err
+│   │   │   │   └── qscore_pce_cpu_8426981_4.out
+│   │   │   └── 20260713-104338
+│   │   │       ├── qscore_pce_cpu_8427004_0.err
+│   │   │       ├── qscore_pce_cpu_8427004_0.out
+│   │   │       ├── qscore_pce_cpu_8427004_10.err
+│   │   │       ├── qscore_pce_cpu_8427004_10.out
+│   │   │       ├── qscore_pce_cpu_8427004_11.err
+│   │   │       ├── qscore_pce_cpu_8427004_11.out
+│   │   │       ├── qscore_pce_cpu_8427004_12.err
+│   │   │       ├── qscore_pce_cpu_8427004_12.out
+│   │   │       ├── qscore_pce_cpu_8427004_13.err
+│   │   │       ├── qscore_pce_cpu_8427004_13.out
+│   │   │       ├── qscore_pce_cpu_8427004_14.err
+│   │   │       ├── qscore_pce_cpu_8427004_14.out
+│   │   │       ├── qscore_pce_cpu_8427004_15.err
+│   │   │       ├── qscore_pce_cpu_8427004_15.out
+│   │   │       ├── qscore_pce_cpu_8427004_16.err
+│   │   │       ├── qscore_pce_cpu_8427004_16.out
+│   │   │       ├── qscore_pce_cpu_8427004_17.err
+│   │   │       ├── qscore_pce_cpu_8427004_17.out
+│   │   │       ├── qscore_pce_cpu_8427004_18.err
+│   │   │       ├── qscore_pce_cpu_8427004_18.out
+│   │   │       ├── qscore_pce_cpu_8427004_19.err
+│   │   │       ├── qscore_pce_cpu_8427004_19.out
+│   │   │       ├── qscore_pce_cpu_8427004_1.err
+│   │   │       ├── qscore_pce_cpu_8427004_1.out
+│   │   │       ├── qscore_pce_cpu_8427004_20.err
+│   │   │       ├── qscore_pce_cpu_8427004_20.out
+│   │   │       ├── qscore_pce_cpu_8427004_2.err
+│   │   │       ├── qscore_pce_cpu_8427004_2.out
+│   │   │       ├── qscore_pce_cpu_8427004_3.err
+│   │   │       ├── qscore_pce_cpu_8427004_3.out
+│   │   │       ├── qscore_pce_cpu_8427004_4.err
+│   │   │       ├── qscore_pce_cpu_8427004_4.out
+│   │   │       ├── qscore_pce_cpu_8427004_5.err
+│   │   │       ├── qscore_pce_cpu_8427004_5.out
+│   │   │       ├── qscore_pce_cpu_8427004_6.err
+│   │   │       ├── qscore_pce_cpu_8427004_6.out
+│   │   │       ├── qscore_pce_cpu_8427004_7.err
+│   │   │       ├── qscore_pce_cpu_8427004_7.out
+│   │   │       ├── qscore_pce_cpu_8427004_8.err
+│   │   │       ├── qscore_pce_cpu_8427004_8.out
+│   │   │       ├── qscore_pce_cpu_8427004_9.err
+│   │   │       └── qscore_pce_cpu_8427004_9.out
+│   │   ├── merge_chunks_qscore_PCE.py
+│   │   ├── __pycache__
+│   │   │   └── qscore_PCE.cpython-39.pyc
+│   │   ├── qscore_PCE.py
+│   │   ├── Resultados
+│   │   │   └── PCE
+│   │   │       ├── 20260712-220132
+│   │   │       │   ├── chunks
+│   │   │       │   └── n_200.h5
+│   │   │       ├── 20260713-093625
+│   │   │       │   └── chunks
+│   │   │       ├── 20260713-104256
+│   │   │       │   └── chunks
+│   │   │       └── 20260713-104338
+│   │   │           └── chunks
+│   │   ├── run_qscore_PCE_chunk.py
+│   │   ├── run_qscore_PCE_chunk_task_cpu.sh
+│   │   ├── run_qscore_PCE_chunk_task_gpu.sh
+│   │   ├── run_qscore_PCE_single_n.py
+│   │   └── submit_qscore_PCE_parallel.sh
+│   └── QMIO
+│       ├── aggregate_qscore_PCE.py
+│       ├── Imagenes
+│       │   └── PCE
+│       │       ├── 20260712-014124
+│       │       ├── 20260712-142830
+│       │       │   └── qscore_pce_n200-300_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-083310.png
+│       │       ├── 20260712-220501
+│       │       ├── 20260712-220547
+│       │       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260712-231253.png
+│       │       ├── 20260713-090746
+│       │       ├── 20260713-133457
+│       │       ├── 20260713-133623
+│       │       ├── 20260713-133706
+│       │       └── 20260713-133732
+│       ├── logs
+│       │   ├── 20260712-014124
+│       │   │   ├── qscore_pce_513774_0.err
+│       │   │   ├── qscore_pce_513774_0.out
+│       │   │   ├── qscore_pce_513774_10.err
+│       │   │   ├── qscore_pce_513774_10.out
+│       │   │   ├── qscore_pce_513774_11.err
+│       │   │   ├── qscore_pce_513774_11.out
+│       │   │   ├── qscore_pce_513774_12.err
+│       │   │   ├── qscore_pce_513774_12.out
+│       │   │   ├── qscore_pce_513774_13.err
+│       │   │   ├── qscore_pce_513774_13.out
+│       │   │   ├── qscore_pce_513774_14.err
+│       │   │   ├── qscore_pce_513774_14.out
+│       │   │   ├── qscore_pce_513774_1.err
+│       │   │   ├── qscore_pce_513774_1.out
+│       │   │   ├── qscore_pce_513774_2.err
+│       │   │   ├── qscore_pce_513774_2.out
+│       │   │   ├── qscore_pce_513774_3.err
+│       │   │   ├── qscore_pce_513774_3.out
+│       │   │   ├── qscore_pce_513774_4.err
+│       │   │   ├── qscore_pce_513774_4.out
+│       │   │   ├── qscore_pce_513774_5.err
+│       │   │   ├── qscore_pce_513774_5.out
+│       │   │   ├── qscore_pce_513774_6.err
+│       │   │   ├── qscore_pce_513774_6.out
+│       │   │   ├── qscore_pce_513774_7.err
+│       │   │   ├── qscore_pce_513774_7.out
+│       │   │   ├── qscore_pce_513774_8.err
+│       │   │   ├── qscore_pce_513774_8.out
+│       │   │   ├── qscore_pce_513774_9.err
+│       │   │   └── qscore_pce_513774_9.out
+│       │   ├── 20260712-142830
+│       │   │   ├── qscore_pce_513813_0.err
+│       │   │   ├── qscore_pce_513813_0.out
+│       │   │   ├── qscore_pce_513813_10.err
+│       │   │   ├── qscore_pce_513813_10.out
+│       │   │   ├── qscore_pce_513813_11.err
+│       │   │   ├── qscore_pce_513813_11.out
+│       │   │   ├── qscore_pce_513813_12.err
+│       │   │   ├── qscore_pce_513813_12.out
+│       │   │   ├── qscore_pce_513813_13.err
+│       │   │   ├── qscore_pce_513813_13.out
+│       │   │   ├── qscore_pce_513813_14.err
+│       │   │   ├── qscore_pce_513813_14.out
+│       │   │   ├── qscore_pce_513813_15.err
+│       │   │   ├── qscore_pce_513813_15.out
+│       │   │   ├── qscore_pce_513813_16.err
+│       │   │   ├── qscore_pce_513813_16.out
+│       │   │   ├── qscore_pce_513813_17.err
+│       │   │   ├── qscore_pce_513813_17.out
+│       │   │   ├── qscore_pce_513813_18.err
+│       │   │   ├── qscore_pce_513813_18.out
+│       │   │   ├── qscore_pce_513813_19.err
+│       │   │   ├── qscore_pce_513813_19.out
+│       │   │   ├── qscore_pce_513813_1.err
+│       │   │   ├── qscore_pce_513813_1.out
+│       │   │   ├── qscore_pce_513813_20.err
+│       │   │   ├── qscore_pce_513813_20.out
+│       │   │   ├── qscore_pce_513813_21.err
+│       │   │   ├── qscore_pce_513813_21.out
+│       │   │   ├── qscore_pce_513813_2.err
+│       │   │   ├── qscore_pce_513813_2.out
+│       │   │   ├── qscore_pce_513813_3.err
+│       │   │   ├── qscore_pce_513813_3.out
+│       │   │   ├── qscore_pce_513813_4.err
+│       │   │   ├── qscore_pce_513813_4.out
+│       │   │   ├── qscore_pce_513813_5.err
+│       │   │   ├── qscore_pce_513813_5.out
+│       │   │   ├── qscore_pce_513813_6.err
+│       │   │   ├── qscore_pce_513813_6.out
+│       │   │   ├── qscore_pce_513813_7.err
+│       │   │   ├── qscore_pce_513813_7.out
+│       │   │   ├── qscore_pce_513813_8.err
+│       │   │   ├── qscore_pce_513813_8.out
+│       │   │   ├── qscore_pce_513813_9.err
+│       │   │   └── qscore_pce_513813_9.out
+│       │   ├── 20260712-220501
+│       │   ├── 20260712-220547
+│       │   │   ├── qscore_pce_513844_0.err
+│       │   │   ├── qscore_pce_513844_0.out
+│       │   │   ├── qscore_pce_513844_10.err
+│       │   │   ├── qscore_pce_513844_10.out
+│       │   │   ├── qscore_pce_513844_11.err
+│       │   │   ├── qscore_pce_513844_11.out
+│       │   │   ├── qscore_pce_513844_1.err
+│       │   │   ├── qscore_pce_513844_1.out
+│       │   │   ├── qscore_pce_513844_2.err
+│       │   │   ├── qscore_pce_513844_2.out
+│       │   │   ├── qscore_pce_513844_3.err
+│       │   │   ├── qscore_pce_513844_3.out
+│       │   │   ├── qscore_pce_513844_4.err
+│       │   │   ├── qscore_pce_513844_4.out
+│       │   │   ├── qscore_pce_513844_5.err
+│       │   │   ├── qscore_pce_513844_5.out
+│       │   │   ├── qscore_pce_513844_6.err
+│       │   │   ├── qscore_pce_513844_6.out
+│       │   │   ├── qscore_pce_513844_7.err
+│       │   │   ├── qscore_pce_513844_7.out
+│       │   │   ├── qscore_pce_513844_8.err
+│       │   │   ├── qscore_pce_513844_8.out
+│       │   │   ├── qscore_pce_513844_9.err
+│       │   │   └── qscore_pce_513844_9.out
+│       │   ├── 20260713-090746
+│       │   │   ├── qscore_pce_513913_10.err
+│       │   │   ├── qscore_pce_513913_10.out
+│       │   │   ├── qscore_pce_513913_1.err
+│       │   │   ├── qscore_pce_513913_1.out
+│       │   │   ├── qscore_pce_513913_2.err
+│       │   │   ├── qscore_pce_513913_2.out
+│       │   │   ├── qscore_pce_513913_3.err
+│       │   │   ├── qscore_pce_513913_3.out
+│       │   │   ├── qscore_pce_513913_4.err
+│       │   │   ├── qscore_pce_513913_4.out
+│       │   │   ├── qscore_pce_513913_5.err
+│       │   │   ├── qscore_pce_513913_5.out
+│       │   │   ├── qscore_pce_513913_6.err
+│       │   │   ├── qscore_pce_513913_6.out
+│       │   │   ├── qscore_pce_513913_7.err
+│       │   │   ├── qscore_pce_513913_7.out
+│       │   │   ├── qscore_pce_513913_8.err
+│       │   │   ├── qscore_pce_513913_8.out
+│       │   │   ├── qscore_pce_513913_9.err
+│       │   │   ├── qscore_pce_513913_9.out
+│       │   │   ├── qscore_pce_514019_0.err
+│       │   │   └── qscore_pce_514019_0.out
+│       │   ├── 20260713-133457
+│       │   │   ├── qscore_pce_513959_0.err
+│       │   │   ├── qscore_pce_513959_0.out
+│       │   │   ├── qscore_pce_513959_1.err
+│       │   │   ├── qscore_pce_513959_1.out
+│       │   │   ├── qscore_pce_513959_2.err
+│       │   │   ├── qscore_pce_513959_2.out
+│       │   │   ├── qscore_pce_513959_3.err
+│       │   │   ├── qscore_pce_513959_3.out
+│       │   │   ├── qscore_pce_513959_4.err
+│       │   │   ├── qscore_pce_513959_4.out
+│       │   │   ├── qscore_pce_513959_5.err
+│       │   │   ├── qscore_pce_513959_5.out
+│       │   │   ├── qscore_pce_513959_6.err
+│       │   │   └── qscore_pce_513959_6.out
+│       │   └── 20260713-133623
+│       │       ├── qscore_pce_513966_0.err
+│       │       ├── qscore_pce_513966_0.out
+│       │       ├── qscore_pce_513966_10.err
+│       │       ├── qscore_pce_513966_10.out
+│       │       ├── qscore_pce_513966_11.err
+│       │       ├── qscore_pce_513966_11.out
+│       │       ├── qscore_pce_513966_12.err
+│       │       ├── qscore_pce_513966_12.out
+│       │       ├── qscore_pce_513966_1.err
+│       │       ├── qscore_pce_513966_1.out
+│       │       ├── qscore_pce_513966_2.err
+│       │       ├── qscore_pce_513966_2.out
+│       │       ├── qscore_pce_513966_3.err
+│       │       ├── qscore_pce_513966_3.out
+│       │       ├── qscore_pce_513966_4.err
+│       │       ├── qscore_pce_513966_4.out
+│       │       ├── qscore_pce_513966_5.err
+│       │       ├── qscore_pce_513966_5.out
+│       │       ├── qscore_pce_513966_6.err
+│       │       ├── qscore_pce_513966_6.out
+│       │       ├── qscore_pce_513966_7.err
+│       │       ├── qscore_pce_513966_7.out
+│       │       ├── qscore_pce_513966_8.err
+│       │       ├── qscore_pce_513966_8.out
+│       │       ├── qscore_pce_513966_9.err
+│       │       └── qscore_pce_513966_9.out
+│       ├── merge_chunks_qscore_PCE.py
+│       ├── __pycache__
+│       │   └── qscore_PCE.cpython-311.pyc
+│       ├── qscore_PCE.py
+│       ├── Resultados
+│       │   └── PCE
+│       │       ├── 20260712-014124
+│       │       │   └── chunks
+│       │       ├── 20260712-142830
+│       │       │   ├── chunks
+│       │       │   └── qscore_pce_n200-300_k3_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260713-083310.csv
+│       │       ├── 20260712-220501
+│       │       │   └── chunks
+│       │       ├── 20260712-220547
+│       │       │   ├── chunks
+│       │       │   ├── n_10.h5
+│       │       │   ├── n_20.h5
+│       │       │   ├── n_30.h5
+│       │       │   ├── n_40.h5
+│       │       │   ├── n_50.h5
+│       │       │   ├── n_60.h5
+│       │       │   ├── n_70.h5
+│       │       │   ├── n_80.h5
+│       │       │   └── qscore_pce_n10-80_k2_DIFFERENTIALEVOLUTION_maxiter25_seed42_20260712-231253.csv
+│       │       ├── 20260713-090746
+│       │       │   └── chunks
+│       │       │       ├── n_350_chunk_10_of_11.h5
+│       │       │       ├── n_350_chunk_1_of_11.h5
+│       │       │       ├── n_350_chunk_2_of_11.h5
+│       │       │       ├── n_350_chunk_3_of_11.h5
+│       │       │       ├── n_350_chunk_4_of_11.h5
+│       │       │       ├── n_350_chunk_5_of_11.h5
+│       │       │       ├── n_350_chunk_6_of_11.h5
+│       │       │       ├── n_350_chunk_7_of_11.h5
+│       │       │       ├── n_350_chunk_8_of_11.h5
+│       │       │       └── n_350_chunk_9_of_11.h5
+│       │       ├── 20260713-133457
+│       │       │   └── chunks
+│       │       └── 20260713-133623
+│       │           ├── chunks
+│       │           └── n_200.h5
+│       ├── run_qscore_PCE_chunk.py
+│       ├── run_qscore_PCE_chunk_task.sh
+│       ├── run_qscore_PCE_single_n.py
+│       └── submit_qscore_PCE_parallel.sh
+└── simuls.txt
+
+179 directories, 1019 files

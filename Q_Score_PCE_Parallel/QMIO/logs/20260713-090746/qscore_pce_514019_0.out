@@ -1,0 +1,25 @@
+slurmstepd: info: Setting TMPDIR to /scratch/514019. Previous errors about TMPDIR can be discarded
+==============================
+RUN_ID: 20260713-090746
+Array ID: 0  (entrada: 350:0:11)
+num_nodes: 350   chunk: 1/11
+num_instances (total del n): 100
+num_workers: 16
+optimizer: DIFFERENTIALEVOLUTION   maxiter: 25   k: 3
+backend: AER   shots: 0
+==============================
+
+==============================
+num_nodes     = 350
+num_instances = 100 (total del n)
+chunk         = 1/11
+num_workers   = 16
+k             = 3
+optimizer     = DIFFERENTIALEVOLUTION
+maxiter       = 25
+backend       = AER
+outdir        = Resultados/PCE/20260713-090746/chunks
+==============================
+
+(num_workers ajustado de 16 a 10: este chunk solo tiene 10 instancias)
+Fecha fin: Tue Jul 14 04:54:35 CEST 2026
