@@ -1,3 +1,5 @@
+The main directories that should be used are Q_Score_PCE (has code to send serial jobs and basic job-arrays) and Q_Score_PCE_Parallel (has a better parallelization implementation). The other documents and directories have previous calculations and can be overlooked.
+
 This code has been designed to run on CESGAs infrastructures, Finisterrae III (HPC computer) anda QMIO (quantum computer), 
 some adaptations on the .sh archives should be made to be able to run on different hardware.
 
