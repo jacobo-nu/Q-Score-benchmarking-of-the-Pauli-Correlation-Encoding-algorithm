@@ -14,7 +14,7 @@ This aggregate.py functions just with the .h5, being able to combine data from d
 this has been done to be able to save as much information as possible from every run, being able to complete simulations that were interrupted
 or in case you want to add extra points to the graph. In case different parameters were used, a notification will appear.
 
-Some other variations that use more parallelization methods are found in the Q_Score_Parallel directorie, where an extra merge_chunks.py is needed before aggregate.py.
+Some other variations that use more parallelization methods are found in the Q_Score_PCE_Parallel directorie, where an extra merge_chunks.py is needed before aggregate.py.
 The code is commented with explanations of each function and has indicated how to run it.
 
 When runing the code, 3 directories are created, one called Imágenes, one called logs, and another one called Resultados using the timestamp of the job as name.
