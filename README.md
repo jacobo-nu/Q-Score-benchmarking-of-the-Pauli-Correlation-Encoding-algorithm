@@ -8,7 +8,7 @@ There are 3 main Python archives in the Q_Score_PCE directorie:
 - aggregate.py gets the data from the .h5 from the calculations and generates a .csv that has the information for multiple 'n',
   using it to create a graph with the information
 
-This aggregation.py functions just with the .h5, being able to combine data from different simulations to create one graph; 
+This aggregate.py functions just with the .h5, being able to combine data from different simulations to create one graph; 
 this has been done to be able to save as much information as possible from every run, being able to complete simulations that were interrupted
 or in case you want to add extra points to the graph. In case different parameters were used, a notification will appear.
 
