@@ -51,6 +51,14 @@ def parse_args():
                               "logs-dir en un único summary.log y borra los ficheros "
                               "individuales. La información numérica ya vive en los JSON, "
                               "así que los logs crudos por tarea suelen ser prescindibles.")
+    parser.add_argument("--run-ids", type=str, nargs="+", default=None,
+                         help="MODO COMPARACIÓN: dos o más RUN_ID a combinar en una misma "
+                              "gráfica, cada uno con su propio color. Si se indica, ignora "
+                              "--run-id/--indir/--cleanup-logs y usa este modo en su lugar.")
+    parser.add_argument("--labels", type=str, nargs="+", default=None,
+                         help="Etiquetas de leyenda para --run-ids, en el mismo orden. "
+                              "Si no se indican, se autogeneran a partir de los campos "
+                              "que varíen entre runs (shots, k).")
     args = parser.parse_args()
 
     if args.run_id is not None:
@@ -150,8 +158,126 @@ def cleanup_logs(logs_dir):
     print(f"✔ {len(log_files)} logs individuales concatenados en '{summary_path}' y eliminados.")
 
 
+def _auto_labels(all_results):
+    """
+    Genera etiquetas automáticas para el modo comparación a partir de los
+    campos que realmente varíen entre runs (shots, k, maxiter). Si todos
+    los runs comparten el mismo valor de un campo, no se incluye en la
+    etiqueta (sería ruido repetido); si un campo varía, se muestra en
+    todas las etiquetas para que la leyenda sea autoexplicativa por sí sola.
+    """
+    shots_vals = {r[0].get("shots", 0) for _, r in all_results}
+    k_vals = {r[0]["k"] for _, r in all_results}
+    maxiter_vals = {r[0].get("pce_maxiter") for _, r in all_results}
+
+    labels = []
+    for run_id, results in all_results:
+        r0 = results[0]
+        parts = []
+        if len(shots_vals) > 1:
+            s = r0.get("shots", 0)
+            parts.append(f"shots={s}" if s else "exact")
+        if len(k_vals) > 1:
+            parts.append(f"k={r0['k']}")
+        if len(maxiter_vals) > 1 and r0.get("pce_maxiter") is not None:
+            parts.append(f"maxiter={r0['pce_maxiter']}")
+        labels.append(", ".join(parts) if parts else run_id)
+    return labels
+
+
+def main_compare(args):
+    """
+    Modo comparación: combina varios runs (--run-ids) en una sola gráfica,
+    un color por run, para comparar p.ej. mismo número de shots con
+    distinta compresión k, o al revés. No dibuja las líneas verticales de
+    salto de qubits (con varios runs a la vez se solaparían y ensuciarían
+    la gráfica) y no genera CSV combinado — cada run conserva su propio
+    CSV individual, generado normalmente con --run-id.
+    """
+    run_ids = args.run_ids
+    labels = args.labels
+    if labels is not None and len(labels) != len(run_ids):
+        raise SystemExit(
+            f"--labels tiene {len(labels)} elementos pero --run-ids tiene "
+            f"{len(run_ids)}; deben coincidir uno a uno."
+        )
+
+    all_results = []
+    for run_id in run_ids:
+        indir = os.path.join("Resultados", "PCE", run_id)
+        results = load_results(indir)
+        all_results.append((run_id, results))
+
+    if labels is None:
+        labels = _auto_labels(all_results)
+
+    fig = plt.figure()
+    ax = plt.axes()
+    plt.axhline(0.2, color="red", linestyle="dashed", label="Threshold")
+
+    cmap = plt.get_cmap("tab10")
+    all_nodes = set()
+    combined_rows = []
+    for i, ((run_id, results), label) in enumerate(zip(all_results, labels)):
+        nodes_list = [r["num_nodes"] for r in results]
+        beta_list = [r["beta"] for r in results]
+        beta_std_list = [r["beta_std"] for r in results]
+        all_nodes.update(nodes_list)
+        color = cmap(i % 10)
+        plt.errorbar(nodes_list, beta_list, yerr=beta_std_list, fmt="-o",
+                     capsize=6, markersize=6, color=color, label=label)
+
+        qscore = 0
+        for r in results:
+            if r["success"]:
+                qscore = r["num_nodes"]
+            row = dict(r)
+            row["run_id"] = run_id
+            row["label"] = label
+            combined_rows.append(row)
+        print(f"[{label}] (run_id={run_id})  Q-Score (PCE) final: {qscore}")
+
+    ax.set_ylabel(r"Q-score ratio $\beta(n)$")
+    ax.set_xlabel("Number of nodes $(n)$")
+    plt.xticks(sorted(all_nodes), rotation=90)
+    plt.legend(loc="lower left", fontsize=8)
+    plt.grid(True)
+    plt.title(f"Q-score (PCE) — comparación de {len(run_ids)} runs", fontsize=9)
+    plt.gcf().set_dpi(250)
+
+    run_timestamp = strftime("%Y%m%d-%H%M%S")
+    if args.out is not None:
+        out_path = args.out
+    else:
+        img_dir = args.img_dir
+        fig_name = f"qscore_pce_compare_{len(run_ids)}runs_{run_timestamp}.png"
+        os.makedirs(img_dir, exist_ok=True)
+        out_path = os.path.join(img_dir, fig_name)
+
+    fig.savefig(out_path, bbox_inches="tight")
+    print(f"\n✔ Figura comparativa guardada en: {out_path}")
+
+    # CSV combinado, con columna run_id/label para poder filtrar luego.
+    df = pd.DataFrame(combined_rows)
+    ordered_cols = [c for c in [
+        "run_id", "label", "num_nodes", "num_qubits", "num_instances", "beta",
+        "beta_std", "success", "duration_seconds", "k", "seed", "pce_optimizer",
+        "pce_maxiter", "simulator", "device", "device_actual", "shots",
+        "timestamp", "cut_sizes",
+    ] if c in df.columns]
+    df = df[ordered_cols + [c for c in df.columns if c not in ordered_cols]]
+    csv_path = os.path.splitext(out_path)[0] + ".csv"
+    df.to_csv(csv_path, index=False)
+    print(f"✔ Tabla combinada (CSV) guardada en: {csv_path}")
+
+
 def main():
     args = parse_args()
+
+    if args.run_ids is not None:
+        main_compare(args)
+        return
+
     results = load_results(args.indir)
 
     nodes_list = [r["num_nodes"] for r in results]
@@ -168,6 +294,7 @@ def main():
     seed = results[0]["seed"]
     simulator = results[0].get("simulator")
     device = results[0].get("device")
+    backend = results[0].get("backend")
     shots = results[0].get("shots", 0)  # retrocompatible: runs sin este campo = modo exacto
 
     inconsistent = [
@@ -253,10 +380,15 @@ def main():
     # (statevector/mps/...) no es lo relevante para el título — se muestra
     # el simulador SOLO si es modo exacto, y los shots SOLO si shots>0,
     # nunca los dos a la vez.
+    # En hardware real (backend == "QMIO_REAL") 'device' sigue valiendo
+    # "CPU" (viene de PCE_DEVICE, que nunca se apunta a la QPU), así que
+    # el device mostrado se fuerza a "QPU" — no tiene sentido decir
+    # CPU/GPU cuando en realidad se ejecutó en el chip.
+    device_label = "QPU" if backend == "QMIO_REAL" else device
     if shots:
-        title += f"\nshots={shots}" + (f" ({device})" if device is not None else "")
+        title += f"\nshots={shots}" + (f" ({device_label})" if device_label is not None else "")
     elif simulator is not None:
-        title += f"\n{simulator}" + (f" ({device})" if device is not None else "")
+        title += f"\n{simulator}" + (f" ({device_label})" if device_label is not None else "")
     plt.title(title, fontsize=9)
     plt.gcf().set_dpi(250)
 
