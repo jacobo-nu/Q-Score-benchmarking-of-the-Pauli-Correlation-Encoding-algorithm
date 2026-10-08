@@ -22,7 +22,7 @@
 module load qmio/hpc gcc/12.3.0 qiskit/2.2.3-python-3.11.9 qmio-tools/0.2.1-python-3.11.9
 
 export PCE_DEVICE="CPU"
-export PCE_SIM_METHOD="statevector"
+export PCE_SIM_METHOD="matrix_product_state"
 export PCE_SHOTS="${PCE_SHOTS:-0}"
 export PCE_BACKEND="${PCE_BACKEND:-AER}"
 

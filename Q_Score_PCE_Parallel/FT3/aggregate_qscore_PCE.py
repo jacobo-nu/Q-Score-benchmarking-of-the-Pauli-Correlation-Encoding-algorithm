@@ -242,7 +242,7 @@ def main_compare(args):
     plt.xticks(sorted(all_nodes), rotation=90)
     plt.legend(loc="lower left", fontsize=8)
     plt.grid(True)
-    plt.title(f"Q-score (PCE) — comparación de {len(run_ids)} runs", fontsize=9)
+    plt.title(f"Q-score (PCE) —  {len(run_ids)} different maxiters", fontsize=9)
     plt.gcf().set_dpi(250)
 
     run_timestamp = strftime("%Y%m%d-%H%M%S")

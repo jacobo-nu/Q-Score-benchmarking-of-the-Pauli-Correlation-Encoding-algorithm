@@ -1196,6 +1196,5 @@
 │       ├── run_qscore_PCE_chunk_task.sh
 │       ├── run_qscore_PCE_single_n.py
 │       └── submit_qscore_PCE_parallel.sh
-└── simuls.txt
 
 179 directories, 1019 files

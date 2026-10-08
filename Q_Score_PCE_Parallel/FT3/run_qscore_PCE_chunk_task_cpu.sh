@@ -43,7 +43,7 @@ export VECLIB_MAXIMUM_THREADS=1
 
 export PCE_DEVICE="CPU"
 export PCE_SIM_METHOD="statevector"
-export PCE_SHOTS="${PCE_SHOTS:-4096}"
+export PCE_SHOTS="${PCE_SHOTS:-8192}"
 export PCE_BACKEND="${PCE_BACKEND:-AER}"
 
 K="${K:-2}"

@@ -38,22 +38,22 @@ mkdir -p "Imagenes/PCE/${RUN_ID}"
 # =============================
 # Lista maestra de tamaños de nodo — ÚNICA fuente de verdad.
 # =============================
-N_LIST_MASTER=(250)
+N_LIST_MASTER=(200 225 250)
 
 # =============================
 # Parámetros de troceo y dispositivo (ajustables sin editar el fichero)
 # =============================
-K="${K:-3}"
-CHUNK_SIZE_PARAMS="${CHUNK_SIZE_PARAMS:-35}"
-MAX_CHUNKS="${MAX_CHUNKS:-10}"
+K="${K:-2}"
+CHUNK_SIZE_PARAMS="${CHUNK_SIZE_PARAMS:-30}"
+MAX_CHUNKS="${MAX_CHUNKS:-16}"
 QUBIT_THRESHOLD="${QUBIT_THRESHOLD:-19}"        # CPU vs GPU, mismo criterio que el pipeline normal
-NUM_WORKERS="${NUM_WORKERS:-16}"                  # procesos en paralelo por chunk, rama CPU
+NUM_WORKERS="${NUM_WORKERS:-12}"                  # procesos en paralelo por chunk, rama CPU
 NUM_WORKERS_GPU="${NUM_WORKERS_GPU:-1}"          # ídem, rama GPU — 1 por defecto: una sola A100
                                                    # normalmente sirve una ejecución de AerSimulator
                                                    # a la vez, varios procesos podrían competir por
                                                    # ella en vez de acelerar. Sube esto solo si
                                                    # confirmas empíricamente que ayuda en tu GPU.
-TIME_LIMIT_CPU="${TIME_LIMIT_CPU:-18:00:00}"  # partición 'medium' — igual que el pipeline normal
+TIME_LIMIT_CPU="${TIME_LIMIT_CPU:-1-00:00:00}"  # partición 'medium' — igual que el pipeline normal
 TIME_LIMIT_GPU="${TIME_LIMIT_GPU:-3-00:00:00}"
 CPUS_PER_TASK="${CPUS_PER_TASK:-32}"
 

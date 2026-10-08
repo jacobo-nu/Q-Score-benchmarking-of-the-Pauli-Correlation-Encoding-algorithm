@@ -47,16 +47,16 @@ mkdir -p "Imagenes/PCE/${RUN_ID}"
 # =============================
 # Lista maestra de tamaños de nodo — ÚNICA fuente de verdad.
 # =============================
-N_LIST_MASTER=(400 500)
+N_LIST_MASTER=(250 275 300 325 350)
 
 # =============================
 # Parámetros de troceo (ajustables sin editar el fichero)
 # =============================
-K="${K:-3}"
-CHUNK_SIZE_PARAMS="${CHUNK_SIZE_PARAMS:-35}"   # nº de parámetros variacionales "objetivo" por chunk
-MAX_CHUNKS="${MAX_CHUNKS:-10}"                   # techo de chunks por n, para no explotar el nº de tareas
-NUM_WORKERS="${NUM_WORKERS:-16}"                 # procesos en paralelo dentro de cada chunk (Opción A)
-TIME_LIMIT="${TIME_LIMIT:-18:00:00}"          # --time único para todo el array (ver nota arriba)
+K="${K:-2}"
+CHUNK_SIZE_PARAMS="${CHUNK_SIZE_PARAMS:-30}"   # nº de parámetros variacionales "objetivo" por chunk
+MAX_CHUNKS="${MAX_CHUNKS:-16}"                   # techo de chunks por n, para no explotar el nº de tareas
+NUM_WORKERS="${NUM_WORKERS:-12}"                 # procesos en paralelo dentro de cada chunk (Opción A)
+TIME_LIMIT="${TIME_LIMIT:-1-00:00:00}"          # --time único para todo el array (ver nota arriba)
 CPUS_PER_TASK="${CPUS_PER_TASK:-32}"
 
 # =============================
