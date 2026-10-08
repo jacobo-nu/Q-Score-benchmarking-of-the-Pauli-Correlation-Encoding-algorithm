@@ -1,7 +1,0 @@
-n=10 beta=0.7373 ± 0.0721 (PASSED)
-
-n=20 beta=0.6846 ± 0.0588 (PASSED)
-
-n=30 beta=0.5419 ± 0.0439 (PASSED)
-
-n=40 beta=0.4908 ± 0.0366 (PASSED)

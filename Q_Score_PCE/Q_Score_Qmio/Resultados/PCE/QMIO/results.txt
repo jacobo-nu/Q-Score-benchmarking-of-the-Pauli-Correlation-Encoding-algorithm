@@ -1,9 +1,0 @@
-
-2026-07-13 14:08:58,736 [INFO] [PCE] n=10 instancia 50/50 completada en 0:00:00:45 — transcurrido=0:00:37:28 restante_estimado=0:00:00:00
-2026-07-13 14:08:58,736 [INFO] [PCE] n=10 beta=0.7550 ± 0.0554 (PASSED) qubits=4 duration=0:00:37:28 max_parallel_threads=64 shots=2048 backend=QMIO_REAL
-
-✔ n=10 beta=0.7693 ± 0.0586 (PASSED) shots=2048
-✔ Resultado guardado en: Resultados/PCE/n_10.h5
-
-✔ n=30 beta=0.3060 ± 0.0433 (PASSED) shots=2048
-✔ Resultado guardado en: Resultados/PCE/n_30.h5

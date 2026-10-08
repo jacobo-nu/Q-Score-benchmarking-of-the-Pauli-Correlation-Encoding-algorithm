@@ -1,2 +1,0 @@
-num_nodes,num_qubits,num_instances,beta,beta_std,success,duration_seconds,k,seed,pce_optimizer,pce_maxiter,simulator,device,device_actual,timestamp,cut_sizes,max_parallel_threads
-350,16,30,0.4833724858408603,0.011171098028570485,True,201122.07391418703,2,42,DIFFERENTIALEVOLUTION,15,AerSimulator-statevector,GPU,GPU,20260708-225222,"[15862, 15775, 15860, 15871, 15880, 15906, 15706, 15894, 15789, 15721, 15838, 15909, 15833, 15822, 15886, 15683, 15803, 15848, 15857, 15905, 15777, 15718, 15871, 15725, 15843, 15891, 15810, 15999, 15840, 15842]",32

@@ -1,0 +1,13 @@
+# Salidas de ejecuciones
+Resultados/
+Imagenes/
+logs/
+slurm-*.out
+slurm-*.err
+
+# Python
+__pycache__/
+*.pyc
+
+# Carpetas exploratorias
+__Pruebas*/
