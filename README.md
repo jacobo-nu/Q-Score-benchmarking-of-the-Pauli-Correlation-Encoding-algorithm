@@ -1,4 +1,6 @@
-The main directories that should be used are Q_Score_PCE (has code to send serial jobs and basic job-arrays) and Q_Score_PCE_Parallel (has a better parallelization implementation).
+This repository is the result of a one month internship at CESGA as part of the University of Santiago de Compostela Physics BSc degree. It is a continuation of previous work done at CESGA and uses some code initially presented in a public IQM repository about Q-Score.
+
+The main directories are Q_Score_PCE (has code to send serial jobs and basic job-arrays) and Q_Score_PCE_Parallel (has a better parallelization implementation).
 
 This code has been designed to run on CESGAs infrastructures, Finisterrae III (HPC computer) anda QMIO (quantum computer), 
 some adaptations on the .sh archives should be made to be able to run on different hardware.
